@@ -5,7 +5,7 @@ Steps to mark a full pass of QA complete.
 * OS: Ubuntu, Mac OSX, Windows
 * Load older version of MetaMask and attempt to simulate updating the extension.
 * Open Developer Console in background and popup, inspect errors.
-* Watch the state logs 
+* Watch the state logs
   * Transactions (unapproved txs -> rejected/submitted -> confirmed)
   * Nonces/LocalNonces
 * Vault integrity
@@ -16,24 +16,16 @@ Steps to mark a full pass of QA complete.
     * Restore from seed
     * Create a second account
     * Import a loose account (not related to HD Wallet)
-    * Import old existing vault seed phrase (pref with test Ether)
+    * Import old existing vault seed phrase (pref with test ETP)
     * Download State Logs, Priv key file, seed phrase file.
-* Send Ether
-    * by address
-    * by ens name
+* Send ETP
 * Web3 API Stability
-    * Create a contract from a Ðapp (remix)
-    * Load a Ðapp that reads using events/logs (ENS)
-    * Connect to MEW/MyCypto
+    * Create a contract from a Ðapp
+    * Load a Ðapp that reads using events/logs
     * Send a transaction from any Ðapp
-        - MEW
-        - EtherDelta
-        - Leeroy
-        - Aragon
-        - (https://tmashuang.github.io/demo-dapp)
     * Check account balances
-* Token Management
-    * create a token with tokenfactory (http://tokenfactory.surge.sh/#/factory)
+* Smart Token (MST)
+    * create a token
     * Add that token to the token view
     * Send that token to another metamask address.
     * confirm the token arrived.

@@ -28,8 +28,6 @@ Ensure the rollback release has been built, and downloaded locally, fully ready 
 
 For a sensitive release, initially roll out to only 1% of Chrome users (since Chrome allows incremental rollout).
 
-Monitor Sentry for any recognizable error logs.
-
 Gradually increase the rollout percentage.
 
 ### In case of Emergency

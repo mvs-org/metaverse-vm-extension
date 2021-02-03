@@ -1,4 +1,4 @@
-# MetaMask Philosophy
+# MetaverseVM extension Philosophy
 
 ## Mission
 
