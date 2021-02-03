@@ -2,7 +2,6 @@ import EventEmitter from 'events'
 import React, { useState } from 'react'
 import Button from '../button'
 import ButtonGroup from '../button-group'
-import Mascot from './mascot.component'
 
 const animationEventEmitter = new EventEmitter()
 
@@ -25,10 +24,6 @@ export default {
 }
 
 export function Demo () {
-  const [lookAtDirection, setLookAtDirection] = useState(null)
-  const [followMouseMode, setFollowMouseMode] = useState(false)
-  const [clickToLookMode, setClickToLookMode] = useState(false)
-  const [clickedTarget, setClickedTarget] = useState(null)
 
   const createDirectionOnClick = (direction) => () => {
     setFollowMouseMode(false)
@@ -47,14 +42,6 @@ export function Demo () {
         }
       }}
     >
-      <Mascot
-        animationEventEmitter={animationEventEmitter}
-        width="120"
-        height="120"
-        followMouse={followMouseMode}
-        lookAtTarget={clickedTarget}
-        lookAtDirection={lookAtDirection}
-      />
       <div style={buttonStyle}>
         <ButtonGroup
           style={{ width: '300px', flexFlow: 'column' }}
