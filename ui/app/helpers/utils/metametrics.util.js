@@ -9,7 +9,7 @@ if (!projectId) {
   projectId = inDevelopment ? 1 : 2
 }
 
-const METAMETRICS_BASE_URL = 'https://chromeextensionmm.innocraft.cloud/piwik.php'
+const METAMETRICS_BASE_URL = '' //'https://chromeextensionmm.innocraft.cloud/piwik.php'
 const METAMETRICS_REQUIRED_PARAMS = `?idsite=${projectId}&rec=1&apiv=1`
 const METAMETRICS_BASE_FULL = METAMETRICS_BASE_URL + METAMETRICS_REQUIRED_PARAMS
 
@@ -187,10 +187,8 @@ function composeUrl (config) {
 }
 
 export function sendMetaMetricsEvent (config) {
-  return window.fetch(composeUrl(config), {
-    'headers': {},
-    'method': 'GET',
-  })
+  console.info('all external metrics are disabled and will be logged to this console instead:',
+  composeUrl(config))
 }
 
 export function verifyUserPermission (config, props) {
