@@ -34,10 +34,6 @@ You can also test with a continuously watching process, via `yarn watch`.
 
 You can run the linter by itself with `yarn lint`.
 
-## Architecture
-
-[![Architecture Diagram](./docs/architecture.png)][1]
-
 ## Development
 
 ```bash
