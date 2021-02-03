@@ -29,7 +29,6 @@ import createStreamSink from './lib/createStreamSink'
 import NotificationManager from './lib/notification-manager'
 import MetamaskController from './metamask-controller'
 import rawFirstTimeState from './first-time-state'
-import setupSentry from './lib/setupSentry'
 import getFirstPreferredLangCode from './lib/get-first-preferred-lang-code'
 import getObjStructure from './lib/getObjStructure'
 import setupEnsIpfsResolver from './lib/ens-ipfs/setup'
@@ -49,10 +48,6 @@ log.setDefaultLevel(process.env.METAMASK_DEBUG ? 'debug' : 'warn')
 const platform = new ExtensionPlatform()
 const notificationManager = new NotificationManager()
 global.METAMASK_NOTIFIER = notificationManager
-
-// setup sentry error reporting
-const release = platform.getVersion()
-const sentry = setupSentry({ release })
 
 let popupIsOpen = false
 let notificationIsOpen = false
@@ -149,7 +144,7 @@ async function initialize () {
   const initState = await loadStateFromPersistence()
   const initLangCode = await getFirstPreferredLangCode()
   await setupController(initState, initLangCode)
-  log.debug('MetaMask initialization complete.')
+  log.debug('MetaverseVM initialization complete.')
 }
 
 //
