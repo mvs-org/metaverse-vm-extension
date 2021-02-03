@@ -176,7 +176,9 @@ export default class NetworkController extends EventEmitter {
     const { type, rpcTarget, chainId, ticker, nickname } = opts
     // infura type-based endpoints
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
-    if (isInfura) {
+    if(type === MAINNET){
+      this._configureStandardProvider({ rpcUrl: 'http://167.86.95.203:9936', chainId: '1281', ticker: 'ETP' })
+    } else if (isInfura) {
       this._configureInfuraProvider(opts)
     // other type-based rpc endpoints
     } else if (type === LOCALHOST) {
@@ -215,7 +217,7 @@ export default class NetworkController extends EventEmitter {
     networks.networkList.rpc = {
       chainId,
       rpcUrl,
-      ticker: ticker || 'ETH',
+      ticker: ticker || 'ETP',
       nickname,
     }
     // setup networkConfig
