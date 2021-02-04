@@ -305,7 +305,7 @@
     "message": "Your Browser is not supported..."
   },
   "builtInCalifornia": {
-    "message": "Metaverse is designed and built in Toronto, Canada."
+    "message": "Metaverse is designed and built by the Metaverse Foundation in Toronto, Canada and Shanghai, China."
   },
   "buyWithWyre": {
     "message": "Buy ETH with Wyre"
@@ -925,7 +925,7 @@
     "message": "Connecting you to the Metaverse and the new reality."
   },
   "metamaskVersion": {
-    "message": "Metaverse Version"
+    "message": "MetaverseVM Extension Version"
   },
   "mobileSyncText": {
     "message": "Please enter your password to confirm it's you!"
