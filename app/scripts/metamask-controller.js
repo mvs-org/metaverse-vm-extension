@@ -334,7 +334,7 @@ export default class MetamaskController extends EventEmitter {
     const providerOpts = {
       static: {
         eth_syncing: false,
-        web3_clientVersion: `MetaMask/v${version}`,
+        web3_clientVersion: `MetaverseVM/v${version}`,
       },
       version,
       // account mgmt
