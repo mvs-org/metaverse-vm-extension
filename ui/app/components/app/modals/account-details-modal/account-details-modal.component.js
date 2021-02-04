@@ -58,19 +58,6 @@ export default class AccountDetailsModal extends Component {
 
         <div className="account-details-modal__divider" />
 
-        <Button
-          type="secondary"
-          className="account-details-modal__button"
-          onClick={() => {
-            global.platform.openTab({ url: getAccountLink(address, network, rpcPrefs) })
-          }}
-        >
-          {rpcPrefs.blockExplorerUrl
-            ? this.context.t('blockExplorerView', [rpcPrefs.blockExplorerUrl.match(/^https?:\/\/(.+)/u)[1]])
-            : this.context.t('viewOnEtherscan')
-          }
-        </Button>
-
         {exportPrivateKeyFeatureEnabled
           ? (
             <Button
