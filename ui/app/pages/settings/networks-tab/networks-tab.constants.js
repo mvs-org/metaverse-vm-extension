@@ -4,7 +4,7 @@ const defaultNetworksData = [
     iconColor: '#29B6AF',
     providerType: 'mainnet',
     rpcUrl: 'http://vm.mvs.org:7939',
-    chainId: '1281',
+    chainId: '43',
     ticker: 'ETP',
     blockExplorerUrl: 'https://explorer.mvs.org',
   },
