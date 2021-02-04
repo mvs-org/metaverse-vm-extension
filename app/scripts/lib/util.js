@@ -75,8 +75,8 @@ const getPlatform = (_) => {
  * @param {Object} txParams - Contains data about a transaction
  * @param {string} txParams.gas The gas for a transaction
  * @param {string} txParams.gasPrice The price per gas for the transaction
- * @param {string} txParams.value The value of ETH to send
- * @param {string} hexBalance - A balance of ETH represented as a hex string
+ * @param {string} txParams.value The value of ETP to send
+ * @param {string} hexBalance - A balance of ETP represented as a hex string
  * @returns {boolean} - Whether the balance is greater than or equal to the value plus the value of gas times gasPrice
  *
  */

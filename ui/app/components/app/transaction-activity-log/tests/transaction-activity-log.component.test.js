@@ -39,7 +39,7 @@ describe('TransactionActivityLog Component', function () {
         className="test-class"
         inlineRetryIndex={-1}
         inlineCancelIndex={-1}
-        nativeCurrency="ETH"
+        nativeCurrency="ETP"
         onCancel={() => undefined}
         onRetry={() => undefined}
         primaryTransactionStatus="confirmed"
@@ -86,7 +86,7 @@ describe('TransactionActivityLog Component', function () {
         className="test-class"
         inlineRetryIndex={2}
         inlineCancelIndex={3}
-        nativeCurrency="ETH"
+        nativeCurrency="ETP"
         onCancel={() => undefined}
         onRetry={() => undefined}
         primaryTransactionStatus="pending"
@@ -135,7 +135,7 @@ describe('TransactionActivityLog Component', function () {
         className="test-class"
         inlineRetryIndex={2}
         inlineCancelIndex={3}
-        nativeCurrency="ETH"
+        nativeCurrency="ETP"
         onCancel={() => undefined}
         onRetry={() => undefined}
         primaryTransactionStatus="pending"

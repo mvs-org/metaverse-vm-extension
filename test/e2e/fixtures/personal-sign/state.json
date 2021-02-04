@@ -15,7 +15,7 @@
       "conversionDate": 1594348502.519,
       "conversionRate": 240.09,
       "currentCurrency": "usd",
-      "nativeCurrency": "ETH"
+      "nativeCurrency": "ETP"
     },
     "IncomingTransactionsController": {
       "incomingTransactions": {},
@@ -34,12 +34,12 @@
       "provider": {
         "nickname": "",
         "rpcTarget": "",
-        "ticker": "ETH",
+        "ticker": "ETP",
         "type": "localhost"
       },
       "network": "5777",
       "settings": {
-        "ticker": "ETH"
+        "ticker": "ETP"
       }
     },
     "OnboardingController": {

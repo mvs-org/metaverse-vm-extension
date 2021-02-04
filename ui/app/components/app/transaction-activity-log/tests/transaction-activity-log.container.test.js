@@ -18,7 +18,7 @@ describe('TransactionActivityLog container', function () {
       const mockState = {
         metamask: {
           conversionRate: 280.45,
-          nativeCurrency: 'ETH',
+          nativeCurrency: 'ETP',
         },
       }
 

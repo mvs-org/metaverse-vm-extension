@@ -515,7 +515,7 @@ export default class PreferencesController {
    * @returns {Promise<array>} - Promise resolving to updated frequentRpcList.
    *
    */
-  addToFrequentRpcList (url, chainId, ticker = 'ETH', nickname = '', rpcPrefs = {}) {
+  addToFrequentRpcList (url, chainId, ticker = 'ETP', nickname = '', rpcPrefs = {}) {
     const rpcList = this.getFrequentRpcListDetail()
     const index = rpcList.findIndex((element) => {
       return element.rpcUrl === url

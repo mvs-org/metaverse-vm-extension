@@ -11,7 +11,7 @@ import { SEND_ROUTE } from '../../../helpers/constants/routes'
 import { useMetricEvent } from '../../../hooks/useMetricEvent'
 import Tooltip from '../../ui/tooltip'
 import UserPreferencedCurrencyDisplay from '../user-preferenced-currency-display'
-import { PRIMARY, SECONDARY } from '../../../helpers/constants/common'
+import { PRIMARY, SECONDARY, ETP } from '../../../helpers/constants/common'
 import { showModal } from '../../../store/actions'
 import { isBalanceCached, getSelectedAccount, getShouldShowFiat } from '../../../selectors/selectors'
 import PaperAirplane from '../../ui/icon/paper-airplane-icon'
@@ -53,7 +53,7 @@ const EthOverview = ({ className }) => {
                 data-testid="eth-overview__primary-currency"
                 value={balance}
                 type={PRIMARY}
-                ethNumberOfDecimals={4}
+                ethNumberOfDecimals={8}
                 hideTitle
               />
               {

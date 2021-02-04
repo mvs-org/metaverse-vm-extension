@@ -129,7 +129,7 @@ class NetworkDropdown extends Component {
 
     return reversedRpcListDetail.map((entry) => {
       const rpc = entry.rpcUrl
-      const ticker = entry.ticker || 'ETH'
+      const ticker = entry.ticker || 'ETP'
       const nickname = entry.nickname || ''
       const currentRpcTarget = provider.type === 'rpc' && rpc === provider.rpcTarget
 
@@ -265,98 +265,6 @@ class NetworkDropdown extends Component {
             }}
           >
             {this.context.t('mainnet')}
-          </span>
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          key="ropsten"
-          closeMenu={() => this.props.hideNetworkDropdown()}
-          onClick={() => this.handleClick('ropsten')}
-          style={dropdownMenuItemStyle}
-        >
-          {
-            providerType === 'ropsten'
-              ? <i className="fa fa-check" />
-              : <div className="network-check__transparent">✓</div>
-          }
-          <NetworkDropdownIcon backgroundColor="#ff4a8d" isSelected={providerType === 'ropsten'} />
-          <span
-            className="network-name-item"
-            style={{
-              color: providerType === 'ropsten'
-                ? '#ffffff'
-                : '#9b9b9b',
-            }}
-          >
-            {this.context.t('ropsten')}
-          </span>
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          key="kovan"
-          closeMenu={() => this.props.hideNetworkDropdown()}
-          onClick={() => this.handleClick('kovan')}
-          style={dropdownMenuItemStyle}
-        >
-          {
-            providerType === 'kovan'
-              ? <i className="fa fa-check" />
-              : <div className="network-check__transparent">✓</div>
-          }
-          <NetworkDropdownIcon backgroundColor="#7057ff" isSelected={providerType === 'kovan'} />
-          <span
-            className="network-name-item"
-            style={{
-              color: providerType === 'kovan'
-                ? '#ffffff'
-                : '#9b9b9b',
-            }}
-          >
-            {this.context.t('kovan')}
-          </span>
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          key="rinkeby"
-          closeMenu={() => this.props.hideNetworkDropdown()}
-          onClick={() => this.handleClick('rinkeby')}
-          style={dropdownMenuItemStyle}
-        >
-          {
-            providerType === 'rinkeby'
-              ? <i className="fa fa-check" />
-              : <div className="network-check__transparent">✓</div>
-          }
-          <NetworkDropdownIcon backgroundColor="#f6c343" isSelected={providerType === 'rinkeby'} />
-          <span
-            className="network-name-item"
-            style={{
-              color: providerType === 'rinkeby'
-                ? '#ffffff'
-                : '#9b9b9b',
-            }}
-          >
-            {this.context.t('rinkeby')}
-          </span>
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          key="goerli"
-          closeMenu={() => this.props.hideNetworkDropdown()}
-          onClick={() => this.handleClick('goerli')}
-          style={dropdownMenuItemStyle}
-        >
-          {
-            providerType === 'goerli'
-              ? <i className="fa fa-check" />
-              : <div className="network-check__transparent">✓</div>
-          }
-          <NetworkDropdownIcon backgroundColor="#3099f2" isSelected={providerType === 'goerli'} />
-          <span
-            className="network-name-item"
-            style={{
-              color: providerType === 'goerli'
-                ? '#ffffff'
-                : '#9b9b9b',
-            }}
-          >
-            {this.context.t('goerli')}
           </span>
         </DropdownMenuItem>
         <DropdownMenuItem

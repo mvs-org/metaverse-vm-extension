@@ -17,7 +17,7 @@ export function getConversionRate (state) {
 }
 
 export function getNativeCurrency (state) {
-  return state.metamask.nativeCurrency
+  return 'ETP' //state.metamask.nativeCurrency
 }
 
 export function getCurrentNetwork (state) {

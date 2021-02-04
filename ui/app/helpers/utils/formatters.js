@@ -1,3 +1,3 @@
-export function formatETHFee (ethFee) {
-  return `${ethFee} ETH`
+export function formatETHFee (etpFee) {
+  return `${etpFee} ETP`
 }

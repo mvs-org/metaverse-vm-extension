@@ -21,24 +21,20 @@ import {
 
 const networks = { networkList: {} }
 
-const env = process.env.METAMASK_ENV
-const { METAMASK_DEBUG } = process.env
-
 let defaultProviderConfigType
 if (process.env.IN_TEST === 'true') {
   defaultProviderConfigType = LOCALHOST
-} else if (METAMASK_DEBUG || env === 'test') {
-  defaultProviderConfigType = RINKEBY
 } else {
   defaultProviderConfigType = MAINNET
 }
 
 const defaultProviderConfig = {
   type: defaultProviderConfigType,
+  ticker: 'ETP',
 }
 
 const defaultNetworkConfig = {
-  ticker: 'ETH',
+  ticker: 'ETP',
 }
 
 export default class NetworkController extends EventEmitter {
@@ -130,7 +126,7 @@ export default class NetworkController extends EventEmitter {
     })
   }
 
-  setRpcTarget (rpcTarget, chainId, ticker = 'ETH', nickname = '', rpcPrefs) {
+  setRpcTarget (rpcTarget, chainId, ticker = 'ETP', nickname = '', rpcPrefs) {
     const providerConfig = {
       type: 'rpc',
       rpcTarget,
@@ -142,7 +138,7 @@ export default class NetworkController extends EventEmitter {
     this.providerConfig = providerConfig
   }
 
-  async setProviderType (type, rpcTarget = '', ticker = 'ETH', nickname = '') {
+  async setProviderType (type, rpcTarget = '', ticker = 'ETP', nickname = '') {
     assert.notEqual(type, 'rpc', `NetworkController - cannot call "setProviderType" with type 'rpc'. use "setRpcTarget"`)
     assert(INFURA_PROVIDER_TYPES.includes(type) || type === LOCALHOST, `NetworkController - Unknown rpc type "${type}"`)
     const providerConfig = { type, rpcTarget, ticker, nickname }
@@ -199,7 +195,7 @@ export default class NetworkController extends EventEmitter {
     this._setNetworkClient(networkClient)
     // setup networkConfig
     const settings = {
-      ticker: 'ETH',
+      ticker: 'ETP',
     }
     this.networkConfig.putState(settings)
   }
@@ -223,6 +219,7 @@ export default class NetworkController extends EventEmitter {
     // setup networkConfig
     let settings = {
       network: chainId,
+      ticker,
     }
     settings = Object.assign(settings, networks.networkList.rpc)
     this.networkConfig.putState(settings)

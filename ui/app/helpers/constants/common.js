@@ -1,4 +1,6 @@
-export const ETH = 'ETH'
+export const ETP = 'ETP'
+
+export const ETH = 'ETP'
 export const GWEI = 'GWEI'
 export const WEI = 'WEI'
 

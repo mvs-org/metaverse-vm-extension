@@ -24,7 +24,7 @@ describe('Token Cell', function () {
       preferences: {},
       provider: {
         chainId: '1',
-        ticker: 'ETH',
+        ticker: 'ETP',
         type: 'mainnet',
       },
     },
