@@ -3,7 +3,7 @@ const defaultNetworksData = [
     labelKey: 'mainnet',
     iconColor: '#29B6AF',
     providerType: 'mainnet',
-    rpcUrl: 'http://167.86.95.203:9936',
+    rpcUrl: 'http://vm.mvs.org:7939',
     chainId: '1281',
     ticker: 'ETP',
     blockExplorerUrl: 'https://explorer.mvs.org',
