@@ -29,9 +29,6 @@ export default class CreateAccountPage extends Component {
         <div className={getClassNames(IMPORT_ACCOUNT_ROUTE)} onClick={() => history.push(IMPORT_ACCOUNT_ROUTE)}>
           {this.context.t('import')}
         </div>
-        <div className={getClassNames(CONNECT_HARDWARE_ROUTE)} onClick={() => history.push(CONNECT_HARDWARE_ROUTE)}>
-          {this.context.t('hardware')}
-        </div>
       </div>
     )
   }
@@ -55,11 +52,6 @@ export default class CreateAccountPage extends Component {
               exact
               path={IMPORT_ACCOUNT_ROUTE}
               component={NewAccountImportForm}
-            />
-            <Route
-              exact
-              path={CONNECT_HARDWARE_ROUTE}
-              component={ConnectHardwareForm}
             />
           </Switch>
         </div>

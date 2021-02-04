@@ -388,30 +388,6 @@ export default class AccountMenu extends Component {
           )}
           text={t('importAccount')}
         />
-        <AccountMenuItem
-          onClick={() => {
-            toggleAccountMenu()
-            metricsEvent({
-              eventOpts: {
-                category: 'Navigation',
-                action: 'Main Menu',
-                name: 'Clicked Connect Hardware',
-              },
-            })
-            if (getEnvironmentType() === ENVIRONMENT_TYPE_POPUP) {
-              global.platform.openExtensionInBrowser(CONNECT_HARDWARE_ROUTE)
-            } else {
-              history.push(CONNECT_HARDWARE_ROUTE)
-            }
-          }}
-          icon={(
-            <img
-              className="account-menu__item-icon"
-              src="images/connect-icon.svg"
-            />
-          )}
-          text={t('connectHardwareWallet')}
-        />
         <div className="account-menu__divider" />
         <AccountMenuItem
           onClick={() => {
