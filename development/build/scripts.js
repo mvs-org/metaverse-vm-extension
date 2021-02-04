@@ -197,7 +197,7 @@ function createScriptTasks ({ browserPlatforms, livereload }) {
         buildStream = buildStream
           .pipe(terser({
             mangle: {
-              reserved: ['MetamaskInpageProvider'],
+              reserved: ['MetaverseVMInpageProvider'],
             },
             sourceMap: {
               content: true,

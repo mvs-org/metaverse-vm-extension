@@ -18,7 +18,7 @@ const inpageBundle = inpageContent + inpageSuffix
 //
 // But for now that is only Firefox
 // If we create a FireFox-only code path using that API,
-// MetaMask will be much faster loading and performant on Firefox.
+// MetaverseVM will be much faster loading and performant on Firefox.
 
 if (shouldInjectProvider()) {
   injectScript(inpageBundle)
@@ -39,7 +39,7 @@ function injectScript (content) {
     container.insertBefore(scriptTag, container.children[0])
     container.removeChild(scriptTag)
   } catch (e) {
-    console.error('MetaMask provider injection failed.', e)
+    console.error('MetaverseVM provider injection failed.', e)
   }
 }
 
@@ -213,7 +213,7 @@ function blockedDomainCheck () {
  * Redirects the current page to a phishing information page
  */
 function redirectToPhishingWarning () {
-  console.log('MetaMask - routing to Phishing Warning component')
+  console.log('MetaverseVM - routing to Phishing Warning component')
   const extensionURL = extension.runtime.getURL('phishing.html')
   window.location.href = `${extensionURL}#${querystring.stringify({
     hostname: window.location.hostname,

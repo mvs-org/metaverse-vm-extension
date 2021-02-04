@@ -1,6 +1,7 @@
 /**
  * @file      The central metamask controller. Aggregates other controllers and exports an api.
  * @copyright Copyright (c) 2018 MetaMask
+ * @copyright Copyright (c) 2021 Metaverse Foundation
  * @license   MIT
  */
 
@@ -638,7 +639,7 @@ export default class MetamaskController extends EventEmitter {
 
       const primaryKeyring = keyringController.getKeyringsByType('HD Key Tree')[0]
       if (!primaryKeyring) {
-        throw new Error('MetamaskController - No HD Key Tree found')
+        throw new Error('MetaverseVMController - No HD Key Tree found')
       }
 
       // seek out the first zero balance

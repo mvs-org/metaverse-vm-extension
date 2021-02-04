@@ -48,13 +48,13 @@ log.setDefaultLevel(process.env.METAMASK_DEBUG ? 'debug' : 'warn')
 //
 
 // setup background connection
-const metamaskStream = new LocalMessageDuplexStream({
+const metaversevmStream = new LocalMessageDuplexStream({
   name: 'inpage',
   target: 'contentscript',
 })
 
 initProvider({
-  connectionStream: metamaskStream,
+  connectionStream: metaversevmStream,
 })
 
 // TODO:deprecate:2020
