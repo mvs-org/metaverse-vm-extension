@@ -88,29 +88,6 @@ export default function AccountOptionsMenu ({ anchorElement, onClose }) {
         { t('accountDetails') }
       </MenuItem>
       <MenuItem
-        onClick={() => {
-          viewOnEtherscanEvent()
-          global.platform.openTab({ url: getAccountLink(address, network, rpcPrefs) })
-          onClose()
-        }}
-        subtitle={
-          rpcPrefs.blockExplorerUrl
-            ? (
-              <span className="account-options-menu__explorer-origin">
-                { rpcPrefs.blockExplorerUrl.match(/^https?:\/\/(.+)/u)[1] }
-              </span>
-            )
-            : null
-        }
-        iconClassName="fas fa-external-link-alt"
-      >
-        {
-          rpcPrefs.blockExplorerUrl
-            ? t('viewinExplorer')
-            : t('viewOnEtherscan')
-        }
-      </MenuItem>
-      <MenuItem
         data-testid="account-options-menu__connected-sites"
         onClick={() => {
           openConnectedSitesEvent()
