@@ -120,6 +120,7 @@ export default class MetamaskController extends EventEmitter {
     })
 
     this.currencyRateController = new CurrencyRateController(undefined, initState.CurrencyController)
+    this.currencyRateController.activeNativeCurrency = 'ETP'
 
     this.phishingController = new PhishingController()
 
