@@ -109,7 +109,7 @@ const converter = ({
     convertedValue = convertedValue.times(rate)
   }
 
-  if (toDenomination) {
+  if (toDenomination && typeof toSpecifiedDenomination[toDenomination] === 'function') {
     convertedValue = toSpecifiedDenomination[toDenomination](convertedValue)
   }
 
