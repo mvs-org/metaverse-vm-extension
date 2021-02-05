@@ -173,17 +173,12 @@ async function loadStateFromPersistence () {
   if (versionedData && !versionedData.data) {
     // unable to recover, clear state
     versionedData = migrator.generateInitialState(firstTimeState)
-    sentry.captureMessage('MetaverseVM - Empty vault found - unable to recover')
   }
 
-  // report migration errors to sentry
   migrator.on('error', (err) => {
     // get vault structure without secrets
     const vaultStructure = getObjStructure(versionedData)
-    sentry.captureException(err, {
-      // "extra" key is required by Sentry
-      extra: { vaultStructure },
-    })
+    console.error('vaultstructure', vaultStructure)
   })
 
   // migrate data
