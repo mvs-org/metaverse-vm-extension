@@ -64,8 +64,6 @@ import accountImporter from './account-import-strategies'
 import selectChainId from './lib/select-chain-id'
 import seedPhraseVerifier from './lib/seed-phrase-verifier'
 
-import backgroundMetaMetricsEvent from './lib/background-metametrics'
-
 export default class MetamaskController extends EventEmitter {
 
   /**
@@ -1829,20 +1827,6 @@ export default class MetamaskController extends EventEmitter {
       throw new Error('Must provide action and name.')
     }
 
-    const metamaskState = await this.getState()
-    const version = this.platform.getVersion()
-    backgroundMetaMetricsEvent(
-      metamaskState,
-      version,
-      {
-        customVariables,
-        eventOpts: {
-          action,
-          category: 'Background',
-          name,
-        },
-      },
-    )
   }
 
   //=============================================================================
