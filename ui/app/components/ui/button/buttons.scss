@@ -7,8 +7,8 @@ $hover-default: #b3b3b3;
 $hover-confirm: #0372c3;
 $hover-red: #feb6bf;
 $hover-red-primary: #c72837;
-$hover-orange: #ffd3b5;
-$warning-light-orange: #f8b588;
+$hover-orange: #488aff;
+$warning-light-orange: #7fadfd;
 
 .button {
   @include H6;
@@ -218,7 +218,7 @@ $warning-light-orange: #f8b588;
   font-size: 1.25rem;
   font-weight: 500;
   transition: 200ms ease-in-out;
-  background-color: rgba(247, 134, 28, 0.9);
+  background-color: #488aff;
   border-radius: 0;
 }
 
@@ -230,8 +230,8 @@ input[type="submit"][disabled] {
 
 button.primary {
   padding: 8px 12px;
-  background: #f7861c;
-  box-shadow: 0 3px 6px rgba(247, 134, 28, 0.36);
+  background: #488aff;
+  box-shadow: 0 3px 6px rgba(59, 89, 223, 0.36);
   color: $white;
   font-size: 1.1em;
   text-transform: uppercase;
