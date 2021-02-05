@@ -29,7 +29,7 @@ class LoadingScreen extends Component {
       <div className="loading-overlay">
         {this.props.header && this.props.header}
         <div className="loading-overlay__container">
-          {this.props.showLoadingSpinner && <Spinner color="#F7C06C" className="loading-overlay__spinner" />}
+          {this.props.showLoadingSpinner && <Spinner color="#488aff" className="loading-overlay__spinner" />}
           {this.renderMessage()}
         </div>
       </div>
