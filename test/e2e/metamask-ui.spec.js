@@ -213,7 +213,7 @@ describe('MetaMask', function () {
     })
   })
 
-  describe('Send ETH from inside MetaMask using default gas', function () {
+  describe('Send ETP from inside MetaMask using default gas', function () {
     it('starts a send transaction', async function () {
       await driver.clickElement(By.xpath(`//button[contains(text(), 'Send')]`))
       await driver.delay(regularDelayMs)
@@ -277,7 +277,7 @@ describe('MetaMask', function () {
     })
   })
 
-  describe('Send ETH from inside MetaMask using fast gas option', function () {
+  describe('Send ETP from inside MetaMask using fast gas option', function () {
     it('starts a send transaction', async function () {
       await driver.clickElement(By.xpath(`//button[contains(text(), 'Send')]`))
       await driver.delay(regularDelayMs)
@@ -316,7 +316,7 @@ describe('MetaMask', function () {
     })
   })
 
-  describe('Send ETH from inside MetaMask using advanced gas modal', function () {
+  describe('Send ETP from inside MetaMask using advanced gas modal', function () {
     it('starts a send transaction', async function () {
       await driver.clickElement(By.xpath(`//button[contains(text(), 'Send')]`))
       await driver.delay(regularDelayMs)
@@ -364,7 +364,7 @@ describe('MetaMask', function () {
     })
   })
 
-  describe('Send ETH from dapp using advanced gas controls', function () {
+  describe('Send ETP from dapp using advanced gas controls', function () {
     let windowHandles
     let extension
     let popup

@@ -1319,7 +1319,7 @@
     "message": "Send Amount"
   },
   "sendETH": {
-    "message": "Send ETH"
+    "message": "Send ETP"
   },
   "sendTokens": {
     "message": "Send Tokens"
