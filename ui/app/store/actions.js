@@ -465,7 +465,7 @@ export function signMsg (msgData) {
     }
     dispatch(hideLoadingIndication())
     dispatch(updateMetamaskState(newState))
-    dispatch(completedTx(msgData.metamaskId))
+    dispatch(completedTx(msgData.metaversevmId))
     dispatch(closeCurrentNotificationWindow())
     return msgData
   }
@@ -488,7 +488,7 @@ export function signPersonalMsg (msgData) {
     }
     dispatch(hideLoadingIndication())
     dispatch(updateMetamaskState(newState))
-    dispatch(completedTx(msgData.metamaskId))
+    dispatch(completedTx(msgData.metaversevmId))
     dispatch(closeCurrentNotificationWindow())
     return msgData
   }
@@ -509,7 +509,7 @@ export function decryptMsgInline (decryptedMsgData) {
     }
 
     dispatch(updateMetamaskState(newState))
-    return newState.unapprovedDecryptMsgs[decryptedMsgData.metamaskId]
+    return newState.unapprovedDecryptMsgs[decryptedMsgData.metaversevmId]
   }
 }
 
@@ -530,7 +530,7 @@ export function decryptMsg (decryptedMsgData) {
     }
     dispatch(hideLoadingIndication())
     dispatch(updateMetamaskState(newState))
-    dispatch(completedTx(decryptedMsgData.metamaskId))
+    dispatch(completedTx(decryptedMsgData.metaversevmId))
     dispatch(closeCurrentNotificationWindow())
     return decryptedMsgData
   }
@@ -553,7 +553,7 @@ export function encryptionPublicKeyMsg (msgData) {
     }
     dispatch(hideLoadingIndication())
     dispatch(updateMetamaskState(newState))
-    dispatch(completedTx(msgData.metamaskId))
+    dispatch(completedTx(msgData.metaversevmId))
     dispatch(closeCurrentNotificationWindow())
     return msgData
   }
@@ -576,7 +576,7 @@ export function signTypedMsg (msgData) {
     }
     dispatch(hideLoadingIndication())
     dispatch(updateMetamaskState(newState))
-    dispatch(completedTx(msgData.metamaskId))
+    dispatch(completedTx(msgData.metaversevmId))
     dispatch(closeCurrentNotificationWindow())
     return msgData
   }

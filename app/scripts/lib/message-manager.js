@@ -14,7 +14,7 @@ import { MESSAGE_TYPE } from './enums'
  * @typedef {Object} Message
  * @property {number} id An id to track and identify the message object
  * @property {Object} msgParams The parameters to pass to the eth_sign method once the signature request is approved.
- * @property {Object} msgParams.metamaskId Added to msgParams for tracking and identification within MetaMask.
+ * @property {Object} msgParams.metaversevmId Added to msgParams for tracking and identification within MetaMask.
  * @property {string} msgParams.data A hex string conversion of the raw buffer data of the signature request
  * @property {number} time The epoch time at which the this message was created
  * @property {string} status Indicates whether the signature request is 'unapproved', 'approved', 'signed' or 'rejected'
@@ -155,12 +155,12 @@ export default class MessageManager extends EventEmitter {
    * any the message params modified for proper signing.
    *
    * @param {Object} msgParams - The msgParams to be used when eth_sign is called, plus data added by MetaMask.
-   * @param {Object} msgParams.metamaskId Added to msgParams for tracking and identification within MetaMask.
-   * @returns {Promise<object>} - Promises the msgParams object with metamaskId removed.
+   * @param {Object} msgParams.metaversevmId Added to msgParams for tracking and identification within MetaMask.
+   * @returns {Promise<object>} - Promises the msgParams object with metaversevmId removed.
    *
    */
   approveMessage (msgParams) {
-    this.setMsgStatusApproved(msgParams.metamaskId)
+    this.setMsgStatusApproved(msgParams.metaversevmId)
     return this.prepMsgForSigning(msgParams)
   }
 
@@ -190,14 +190,14 @@ export default class MessageManager extends EventEmitter {
   }
 
   /**
-   * Removes the metamaskId property from passed msgParams and returns a promise which resolves the updated msgParams
+   * Removes the metaversevmId property from passed msgParams and returns a promise which resolves the updated msgParams
    *
    * @param {Object} msgParams - The msgParams to modify
-   * @returns {Promise<object>} - Promises the msgParams with the metamaskId property removed
+   * @returns {Promise<object>} - Promises the msgParams with the metaversevmId property removed
    *
    */
   prepMsgForSigning (msgParams) {
-    delete msgParams.metamaskId
+    delete msgParams.metaversevmId
     return Promise.resolve(msgParams)
   }
 

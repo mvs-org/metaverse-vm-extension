@@ -47,7 +47,7 @@ function mapDispatchToProps (dispatch) {
     goHome: () => dispatch(goHome()),
     clearConfirmTransaction: () => dispatch(clearConfirmTransaction()),
     encryptionPublicKey: (msgData, event) => {
-      const params = { data: msgData.msgParams, metamaskId: msgData.id }
+      const params = { data: msgData.msgParams, metaversevmId: msgData.id }
       event.stopPropagation()
       return dispatch(encryptionPublicKeyMsg(params))
     },

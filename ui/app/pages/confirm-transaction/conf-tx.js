@@ -121,7 +121,7 @@ class ConfirmTxScreen extends Component {
   signMessage (msgData, event) {
     log.info('conf-tx.js: signing message')
     const params = msgData.msgParams
-    params.metamaskId = msgData.id
+    params.metaversevmId = msgData.id
     this.stopPropagation(event)
     return this.props.dispatch(actions.signMsg(params))
   }
@@ -135,7 +135,7 @@ class ConfirmTxScreen extends Component {
   signPersonalMessage (msgData, event) {
     log.info('conf-tx.js: signing personal message')
     const params = msgData.msgParams
-    params.metamaskId = msgData.id
+    params.metaversevmId = msgData.id
     this.stopPropagation(event)
     return this.props.dispatch(actions.signPersonalMsg(params))
   }
@@ -143,7 +143,7 @@ class ConfirmTxScreen extends Component {
   signTypedMessage (msgData, event) {
     log.info('conf-tx.js: signing typed message')
     const params = msgData.msgParams
-    params.metamaskId = msgData.id
+    params.metaversevmId = msgData.id
     this.stopPropagation(event)
     return this.props.dispatch(actions.signTypedMsg(params))
   }

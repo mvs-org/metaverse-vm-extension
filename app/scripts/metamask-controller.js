@@ -1086,11 +1086,11 @@ export default class MetamaskController extends EventEmitter {
    * @returns {Promise<Object>} - Full state update.
    */
   signMessage (msgParams) {
-    log.info('MetaMaskController - signMessage')
-    const msgId = msgParams.metamaskId
+    log.info('MetaverseVM - signMessage')
+    const msgId = msgParams.metaversevmId
 
     // sets the status op the message to 'approved'
-    // and removes the metamaskId for signing
+    // and removes the metaversevmId for signing
     return this.messageManager.approveMessage(msgParams)
       .then((cleanMsgParams) => {
       // signs the message
@@ -1146,10 +1146,10 @@ export default class MetamaskController extends EventEmitter {
    * @returns {Promise<Object>} - A full state update.
    */
   signPersonalMessage (msgParams) {
-    log.info('MetaMaskController - signPersonalMessage')
-    const msgId = msgParams.metamaskId
+    log.info('MetaverseVMController - signPersonalMessage')
+    const msgId = msgParams.metaversevmId
     // sets the status op the message to 'approved'
-    // and removes the metamaskId for signing
+    // and removes the metaversevmId for signing
     return this.personalMessageManager.approveMessage(msgParams)
       .then((cleanMsgParams) => {
       // signs the message
@@ -1202,7 +1202,7 @@ export default class MetamaskController extends EventEmitter {
   async decryptMessageInline (msgParams) {
     log.info('MetaMaskController - decryptMessageInline')
     // decrypt the message inline
-    const msgId = msgParams.metamaskId
+    const msgId = msgParams.metaversevmId
     const msg = this.decryptMessageManager.getMsg(msgId)
     try {
       const stripped = ethUtil.stripHexPrefix(msgParams.data)
@@ -1227,9 +1227,9 @@ export default class MetamaskController extends EventEmitter {
   */
   async decryptMessage (msgParams) {
     log.info('MetaMaskController - decryptMessage')
-    const msgId = msgParams.metamaskId
+    const msgId = msgParams.metaversevmId
     // sets the status op the message to 'approved'
-    // and removes the metamaskId for decryption
+    // and removes the metaversevmId for decryption
     try {
       const cleanMsgParams = await this.decryptMessageManager.approveMessage(msgParams)
 
@@ -1287,9 +1287,9 @@ export default class MetamaskController extends EventEmitter {
   */
   async encryptionPublicKey (msgParams) {
     log.info('MetaMaskController - encryptionPublicKey')
-    const msgId = msgParams.metamaskId
+    const msgId = msgParams.metaversevmId
     // sets the status op the message to 'approved'
-    // and removes the metamaskId for decryption
+    // and removes the metaversevmId for decryption
     try {
       const params = await this.encryptionPublicKeyManager.approveMessage(msgParams)
 
@@ -1344,7 +1344,7 @@ export default class MetamaskController extends EventEmitter {
    */
   async signTypedMessage (msgParams) {
     log.info('MetaMaskController - eth_signTypedData')
-    const msgId = msgParams.metamaskId
+    const msgId = msgParams.metaversevmId
     const { version } = msgParams
     try {
       const cleanMsgParams = await this.typedMessageManager.approveMessage(msgParams)
@@ -1390,7 +1390,7 @@ export default class MetamaskController extends EventEmitter {
    * transaction.
    * @param {number} originalTxId - the id of the txMeta that you want to attempt to cancel
    * @param {string} [customGasPrice] - the hex value to use for the cancel transaction
-   * @returns {Object} - MetaMask state
+   * @returns {Object} - MetaverseVM state
    */
   async createCancelTransaction (originalTxId, customGasPrice) {
     await this.txController.createCancelTransaction(originalTxId, customGasPrice)
@@ -1461,7 +1461,7 @@ export default class MetamaskController extends EventEmitter {
     const { hostname } = new URL(sender.url)
     // Check if new connection is blocked if phishing detection is on
     if (usePhishDetect && this.phishingController.test(hostname)) {
-      log.debug('MetaMask - sending phishing warning for', hostname)
+      log.debug('MetaverseVM - sending phishing warning for', hostname)
       this.sendPhishingWarning(connectionStream, hostname)
       return
     }

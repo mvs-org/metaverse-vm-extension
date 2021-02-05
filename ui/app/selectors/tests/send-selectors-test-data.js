@@ -179,7 +179,7 @@ const state = {
           'from': '0xc5b8dbac4c1d3f152cdeb400e2313f309c410acb',
           'to': '0x18a3462427bcc9133bb46e88bcbe39cd7ef0e761',
           'value': '0xde0b6b3a7640000',
-          'metamaskId': 4768706228115573,
+          'metaversevmId': 4768706228115573,
           'metamaskNetworkId': '3',
           'gas': '0x5209',
         },

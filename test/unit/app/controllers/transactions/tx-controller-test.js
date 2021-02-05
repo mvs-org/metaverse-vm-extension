@@ -155,7 +155,7 @@ describe('Transaction Controller', function () {
 
       await assert.rejects(
         () => txController.newUnapprovedTransaction(txParams),
-        { message: 'MetaMask Tx Signature: User denied transaction signature.' },
+        { message: 'MetaverseVM Tx Signature: User denied transaction signature.' },
       )
     })
   })

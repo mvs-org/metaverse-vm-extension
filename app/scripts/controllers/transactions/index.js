@@ -162,7 +162,7 @@ export default class TransactionController extends EventEmitter {
   */
   async newUnapprovedTransaction (txParams, opts = {}) {
 
-    log.debug(`MetaMaskController newUnapprovedTransaction ${JSON.stringify(txParams)}`)
+    log.debug(`MetaverseVMController newUnapprovedTransaction ${JSON.stringify(txParams)}`)
 
     const initialTxMeta = await this.addUnapprovedTransaction(txParams, opts.origin)
 
@@ -173,11 +173,11 @@ export default class TransactionController extends EventEmitter {
           case 'submitted':
             return resolve(finishedTxMeta.hash)
           case 'rejected':
-            return reject(cleanErrorStack(ethErrors.provider.userRejectedRequest('MetaMask Tx Signature: User denied transaction signature.')))
+            return reject(cleanErrorStack(ethErrors.provider.userRejectedRequest('MetaverseVM Tx Signature: User denied transaction signature.')))
           case 'failed':
             return reject(cleanErrorStack(ethErrors.rpc.internal(finishedTxMeta.err.message)))
           default:
-            return reject(cleanErrorStack(ethErrors.rpc.internal(`MetaMask Tx Signature: Unknown problem: ${JSON.stringify(finishedTxMeta.txParams)}`)))
+            return reject(cleanErrorStack(ethErrors.rpc.internal(`MetaverseVM Tx Signature: Unknown problem: ${JSON.stringify(finishedTxMeta.txParams)}`)))
         }
       })
     })

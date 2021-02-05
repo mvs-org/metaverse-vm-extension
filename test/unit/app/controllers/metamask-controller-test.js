@@ -692,7 +692,7 @@ describe('MetaMaskController', function () {
       metamaskMsgs = metamaskController.messageManager.getUnapprovedMsgs()
       messages = metamaskController.messageManager.messages
       msgId = Object.keys(metamaskMsgs)[0]
-      messages[0].msgParams.metamaskId = parseInt(msgId, 10)
+      messages[0].msgParams.metaversevmId = parseInt(msgId, 10)
     })
 
     it('persists address from msg params', function () {
@@ -752,7 +752,7 @@ describe('MetaMaskController', function () {
       metamaskPersonalMsgs = metamaskController.personalMessageManager.getUnapprovedMsgs()
       personalMessages = metamaskController.personalMessageManager.messages
       msgId = Object.keys(metamaskPersonalMsgs)[0]
-      personalMessages[0].msgParams.metamaskId = parseInt(msgId, 10)
+      personalMessages[0].msgParams.metaversevmId = parseInt(msgId, 10)
     })
 
     it('errors with no from in msgParams', async function () {

@@ -95,7 +95,7 @@ export function getMetaMaskKeyrings (state) {
   return state.metamask.keyrings
 }
 
-export function getMetaMaskIdentities (state) {
+export function getMetaverseVMIdentities (state) {
   return state.metamask.identities
 }
 
@@ -114,7 +114,7 @@ export function getMetaMaskCachedBalances (state) {
  */
 export const getMetaMaskAccountsOrdered = createSelector(
   getMetaMaskKeyrings,
-  getMetaMaskIdentities,
+  getMetaverseVMIdentities,
   getMetaMaskAccounts,
   (keyrings, identities, accounts) => keyrings
     .reduce((list, keyring) => list.concat(keyring.accounts), [])
@@ -176,7 +176,7 @@ export function getAddressBookEntryName (state, address) {
 
 export function accountsWithSendEtherInfoSelector (state) {
   const accounts = getMetaMaskAccounts(state)
-  const identities = getMetaMaskIdentities(state)
+  const identities = getMetaverseVMIdentities(state)
 
   const accountsWithSendEtherInfo = Object.entries(identities).map(([key, identity]) => {
     return { ...identity, ...accounts[key] }
