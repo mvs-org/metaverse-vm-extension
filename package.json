@@ -71,7 +71,6 @@
     "@metamask/eth-ledger-bridge-keyring": "^0.2.6",
     "@metamask/eth-token-tracker": "^3.0.0",
     "@metamask/etherscan-link": "^1.1.0",
-    "@metamask/inpage-provider": "^6.1.0",
     "@metamask/logo": "^2.5.0",
     "@popperjs/core": "^2.4.0",
     "@reduxjs/toolkit": "^1.3.2",
@@ -167,7 +166,8 @@
     "textarea-caret": "^3.0.1",
     "valid-url": "^1.0.9",
     "web3": "^0.20.7",
-    "web3-stream-provider": "^4.0.0"
+    "web3-stream-provider": "^4.0.0",
+    "fast-deep-equal": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

@@ -5,7 +5,6 @@ import React from 'react'
 import { render } from 'react-dom'
 import { getEnvironmentType } from '../app/scripts/lib/util'
 import { ALERT_TYPES } from '../app/scripts/controllers/alert'
-import { SENTRY_STATE } from '../app/scripts/lib/setupSentry'
 import { ENVIRONMENT_TYPE_POPUP } from '../app/scripts/lib/enums'
 import Root from './app/pages'
 import * as actions from './app/store/actions'
@@ -173,15 +172,6 @@ function setupDebuggingHelpers (store) {
     state.version = global.platform.getVersion()
     state.browser = window.navigator.userAgent
     return state
-  }
-  window.getSentryState = function () {
-    const fullState = store.getState()
-    const debugState = maskObject(fullState, SENTRY_STATE)
-    return {
-      browser: window.navigator.userAgent,
-      store: debugState,
-      version: global.platform.getVersion(),
-    }
   }
 }
 
