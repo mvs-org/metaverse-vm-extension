@@ -47,6 +47,10 @@ yarn start
 yarn dist
 ```
 
+## License
+
+This wallet is a fork of the most recent MetaMask wallet code that was released under the MIT license. We will keep this project under the same license. The license notice can be found in the LICENSE file that is part of the source code.
+
 ## Other Docs
 
 - [How to add custom build to Chrome](./docs/add-to-chrome.md)
@@ -54,4 +58,3 @@ yarn dist
 - [How to add a new translation to MetaverseVM extension](./docs/translating-guide.md)
 - [Publishing Guide](./docs/publishing.md)
 - [How to use the TREZOR emulator](./docs/trezor-emulator.md)
-- [How to generate a visualization of this repository's development](./development/gource-viz.sh)
