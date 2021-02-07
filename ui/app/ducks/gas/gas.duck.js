@@ -173,12 +173,13 @@ export function gasEstimatesLoadingFinished () {
 }
 
 async function queryEthGasStationBasic () {
-  const apiKey = process.env.ETH_GAS_STATION_API_KEY ? `?api-key=${process.env.ETH_GAS_STATION_API_KEY}` : ''
-  const url = `https://ethgasstation.info/json/ethgasAPI.json${apiKey}`
+  //const apiKey = process.env.ETH_GAS_STATION_API_KEY ? `?api-key=${process.env.ETH_GAS_STATION_API_KEY}` : ''
+  //const url = `https://ethgasstation.info/json/ethgasAPI.json${apiKey}`
+  const url = 'https://explorer.mvs.org/api/v2/vm/estimate_gas'
   return await window.fetch(url, {
     'headers': {},
-    'referrer': 'http://ethgasstation.info/json/',
-    'referrerPolicy': 'no-referrer-when-downgrade',
+    //'referrer': 'http://ethgasstation.info/json/',
+    //'referrerPolicy': 'no-referrer-when-downgrade',
     'body': null,
     'method': 'GET',
     'mode': 'cors',
@@ -186,6 +187,15 @@ async function queryEthGasStationBasic () {
 }
 
 async function queryEthGasStationPredictionTable () {
+  return {
+    json: () => (
+      [
+        {"gasprice": 0.02, "hashpower_accepting": 0.0, "hashpower_accepting2": 0.0, "tx_atabove": 1029.0, "age": null, "pct_remaining5m": 0.0, "pct_mined_5m": 0.0, "total_seen_5m": 1.0, "pct_remaining30m": null, "pct_mined_30m": null, "total_seen_30m": null, "average": 11200, "safelow": 11100, "nomine": 11000, "avgdiff": 0, "intercept": 4.8015, "hpa_coef": -0.0243, "avgdiff_coef": -1.6459, "tx_atabove_coef": 0.0006, "int2": 6.9238, "hpa_coef2": -0.067, "sum": 5.4189, "expectedWait": 1000.0, "expectedTime": 190.37},
+      ]
+    )
+  }
+}
+/*async function queryEthGasStationPredictionTable () {
   const apiKey = process.env.ETH_GAS_STATION_API_KEY ? `?api-key=${process.env.ETH_GAS_STATION_API_KEY}` : ''
   const url = `https://ethgasstation.info/json/predictTable.json${apiKey}`
   return await window.fetch(url, {
@@ -196,7 +206,7 @@ async function queryEthGasStationPredictionTable () {
     'method': 'GET',
     'mode': 'cors',
   })
-}
+}*/
 
 export function fetchBasicGasEstimates () {
   return async (dispatch, getState) => {
