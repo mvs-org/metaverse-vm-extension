@@ -1470,8 +1470,8 @@ export default class MetamaskController extends EventEmitter {
     const mux = setupMultiplex(connectionStream)
 
     // messages between inpage and background
-    this.setupProviderConnection(mux.createStream('provider'), sender)
-    this.setupPublicConfig(mux.createStream('publicConfig'))
+    this.setupProviderConnection(mux.createStream('mvsProvider'), sender)
+    this.setupPublicConfig(mux.createStream('mvsPublicConfig'))
   }
 
   /**
@@ -1487,8 +1487,8 @@ export default class MetamaskController extends EventEmitter {
     // setup multiplexing
     const mux = setupMultiplex(connectionStream)
     // connect features
-    this.setupControllerConnection(mux.createStream('controller'))
-    this.setupProviderConnection(mux.createStream('provider'), sender, true)
+    this.setupControllerConnection(mux.createStream('mvsController'))
+    this.setupProviderConnection(mux.createStream('mvsProvider'), sender, true)
   }
 
   /**
@@ -1502,7 +1502,7 @@ export default class MetamaskController extends EventEmitter {
    */
   sendPhishingWarning (connectionStream, hostname) {
     const mux = setupMultiplex(connectionStream)
-    const phishingStream = mux.createStream('phishing')
+    const phishingStream = mux.createStream('mvsPhishing')
     phishingStream.write({ hostname })
   }
 

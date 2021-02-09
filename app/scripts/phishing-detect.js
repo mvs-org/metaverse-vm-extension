@@ -20,14 +20,14 @@ function start () {
   const extensionPort = extension.runtime.connect({ name: getEnvironmentType() })
   const connectionStream = new PortStream(extensionPort)
   const mx = setupMultiplex(connectionStream)
-  setupControllerConnection(mx.createStream('controller'), (err, metaMaskController) => {
+  setupControllerConnection(mx.createStream('mvsController'), (err, metaversevmController) => {
     if (err) {
       return
     }
 
     const continueLink = document.getElementById('unsafe-continue')
     continueLink.addEventListener('click', () => {
-      metaMaskController.safelistPhishingDomain(suspect.hostname)
+      metaversevmController.safelistPhishingDomain(suspect.hostname)
       window.location.href = suspect.href
     })
   })
