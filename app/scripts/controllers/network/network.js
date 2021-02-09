@@ -173,7 +173,7 @@ export default class NetworkController extends EventEmitter {
     // infura type-based endpoints
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
     if(type === MAINNET){
-      this._configureStandardProvider({ rpcUrl: 'http://vm.mvs.org:7939', chainId: '43', ticker: 'ETP' })
+      this._configureStandardProvider({ rpcUrl: 'https://vm.mvs.org/new/', chainId: '43', ticker: 'ETP' })
     } else if (isInfura) {
       this._configureInfuraProvider(opts)
     // other type-based rpc endpoints
