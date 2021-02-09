@@ -135,14 +135,14 @@ module.exports = class MetaverseVMInpageProvider extends SafeEventEmitter {
     })
 
     pump(
-      mux.createStream('publicConfig'),
+      mux.createStream('mvsPublicConfig'),
       asStream(this._publicConfigStore),
       // RPC requests should still work if only this stream fails
       logStreamDisconnectWarning.bind(this, 'MetaverseVM PublicConfigStore'),
     )
 
     // ignore phishing warning message (handled elsewhere)
-    mux.ignoreStream('phishing')
+    mux.ignoreStream('mvsPhishing')
 
     // setup own event listeners
 
@@ -156,7 +156,7 @@ module.exports = class MetaverseVMInpageProvider extends SafeEventEmitter {
     const jsonRpcConnection = createJsonRpcStream()
     pump(
       jsonRpcConnection.stream,
-      mux.createStream('provider'),
+      mux.createStream('mvsProvider'),
       jsonRpcConnection.stream,
       this._handleDisconnect.bind(this, 'MetaverseVM RpcProvider'),
     )
