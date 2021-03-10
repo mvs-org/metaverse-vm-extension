@@ -4,6 +4,7 @@ export const KOVAN = 'kovan'
 export const MAINNET = 'mainnet'
 export const GOERLI = 'goerli'
 export const LOCALHOST = 'localhost'
+export const ANDROMEDA = 'andromeda'
 
 export const MAINNET_NETWORK_ID = '1'
 export const ROPSTEN_NETWORK_ID = '3'
@@ -27,6 +28,7 @@ export const INFURA_PROVIDER_TYPES = [
   ROPSTEN,
   RINKEBY,
   KOVAN,
+  ANDROMEDA,
   MAINNET,
   GOERLI,
 ]

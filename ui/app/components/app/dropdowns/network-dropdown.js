@@ -268,6 +268,29 @@ class NetworkDropdown extends Component {
           </span>
         </DropdownMenuItem>
         <DropdownMenuItem
+          key="main"
+          closeMenu={() => this.props.hideNetworkDropdown()}
+          onClick={() => this.handleClick('andromeda')}
+          style={{ ...dropdownMenuItemStyle, borderColor: '#ec2c50' }}
+        >
+          {
+            providerType === 'andromeda'
+              ? <i className="fa fa-check" />
+              : <div className="network-check__transparent">✓</div>
+          }
+          <NetworkDropdownIcon backgroundColor="#e91550" isSelected={providerType === 'andromeda'} />
+          <span
+            className="network-name-item"
+            style={{
+              color: providerType === 'andromeda'
+                ? '#ffffff'
+                : '#9b9b9b',
+            }}
+          >
+            {this.context.t('andromeda')}
+          </span>
+        </DropdownMenuItem>
+        <DropdownMenuItem
           key="default"
           closeMenu={() => this.props.hideNetworkDropdown()}
           onClick={() => this.handleClick('localhost')}

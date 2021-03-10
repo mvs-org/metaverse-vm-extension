@@ -901,7 +901,7 @@
     "message": "Lock time is too great"
   },
   "mainnet": {
-    "message": "Metaverse Testnet"
+    "message": "Hyperspace Mainnet"
   },
   "memorizePhrase": {
     "message": "Memorize this phrase."
@@ -1764,5 +1764,8 @@
   "encryptionPublicKeyNotice": {
     "message": "$1 would like your public encryption key. By consenting, this site will be able to compose encrypted messages to you.",
     "description": "$1 is the web3 site name"
+  },
+  "andromeda": {
+    "message": "Andromeda Testnet"
   }
 }

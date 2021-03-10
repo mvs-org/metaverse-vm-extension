@@ -97,6 +97,18 @@ export default class Network extends Component {
           </NetworkIndicator>
         )
 
+        case 'andromeda':
+          return (
+            <NetworkIndicator disabled={disabled} hoverText={t('andromeda')} onClick={onClick} providerName={providerName}>
+              <NetworkDropdownIcon
+                backgroundColor="#e91550"
+                nonSelectBackgroundColor="#ec2c50"
+                loading={networkNumber === 'loading'}
+              />
+              <div className="network-name">{t('andromeda')}</div>
+            </NetworkIndicator>
+          )
+
       case 'kovan':
         return (
           <NetworkIndicator disabled={disabled} hoverText={t('kovan')} onClick={onClick} providerName={providerName}>

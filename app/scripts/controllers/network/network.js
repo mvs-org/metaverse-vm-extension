@@ -13,9 +13,10 @@ import createJsonRpcClient from './createJsonRpcClient'
 import createLocalhostClient from './createLocalhostClient'
 
 import {
-  RINKEBY,
+  // RINKEBY,
   MAINNET,
   LOCALHOST,
+  ANDROMEDA,
   INFURA_PROVIDER_TYPES,
 } from './enums'
 
@@ -173,7 +174,9 @@ export default class NetworkController extends EventEmitter {
     // infura type-based endpoints
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
     if(type === MAINNET){
-      this._configureStandardProvider({ rpcUrl: 'https://vm.mvs.org/new/', chainId: '43', ticker: 'ETP' })
+      this._configureStandardProvider({ rpcUrl: 'https://vm.mvs.org/mainnet_rpc/', chainId: '23', ticker: 'ETP' })
+    } else if(type === ANDROMEDA){
+      this._configureStandardProvider({ rpcUrl: 'https://vm.mvs.org/testnet_rpc/', chainId: '43', ticker: 'ETP' })
     } else if (isInfura) {
       this._configureInfuraProvider(opts)
     // other type-based rpc endpoints
