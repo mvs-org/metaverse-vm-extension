@@ -233,7 +233,7 @@ export function getStatusKey (transaction) {
  * @param {Object} rpcPrefs
  */
 export function getBlockExplorerUrlForTx (networkId, hash, rpcPrefs = {}) {
-  return `https://mvs.org`
+  return `https://vm-explorer.mvs.org/tx/${hash}`
   /*if (rpcPrefs.blockExplorerUrl) {
     return `${rpcPrefs.blockExplorerUrl.replace(/\/+$/u, '')}/tx/${hash}`
   }
