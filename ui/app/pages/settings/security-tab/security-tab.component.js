@@ -141,8 +141,8 @@ export default class SecurityTab extends PureComponent {
         { warning && <div className="settings-tab__error">{ warning }</div> }
         { this.renderSeedWords() }
         { this.renderIncomingTransactionsOptIn() }
-        { this.renderPhishingDetectionToggle() }
-        { this.renderMetaMetricsOptIn() }
+        {/* { this.renderPhishingDetectionToggle() } */}
+        {/* { this.renderMetaMetricsOptIn() } */}
       </div>
     )
   }

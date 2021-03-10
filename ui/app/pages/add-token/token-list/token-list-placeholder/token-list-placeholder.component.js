@@ -14,15 +14,6 @@ export default class TokenListPlaceholder extends Component {
         <div className="token-list-placeholder__text">
           { this.context.t('addAcquiredTokens') }
         </div>
-        <Button
-          type="link"
-          className="token-list-placeholder__link"
-          href="https://metamask.zendesk.com/hc/en-us/articles/360015489031"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          { this.context.t('learnMore') }
-        </Button>
       </div>
     )
   }
