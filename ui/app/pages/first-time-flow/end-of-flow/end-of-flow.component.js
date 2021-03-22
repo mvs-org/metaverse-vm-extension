@@ -72,7 +72,7 @@ export default class EndOfFlowScreen extends PureComponent {
         </div>
         <div className="first-time-flow__text-block end-of-flow__text-4">
           { `*${t('endOfFlowMessage8')}` }&nbsp;
-          <a
+          {/* <a
             href="https://metamask.zendesk.com/hc/en-us/articles/360015489591-Basic-Safety-Tips"
             target="_blank"
             rel="noopener noreferrer"
@@ -80,7 +80,7 @@ export default class EndOfFlowScreen extends PureComponent {
             <span className="first-time-flow__link-text">
               {t('endOfFlowMessage9')}
             </span>
-          </a>
+          </a> */}
         </div>
         <Button
           type="primary"

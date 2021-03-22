@@ -106,7 +106,7 @@ export default class InfoTab extends PureComponent {
               </div>
             </div>
           </div>
-          { this.renderInfoLinks() }
+          {/* { this.renderInfoLinks() } */}
         </div>
       </div>
     )

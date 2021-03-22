@@ -208,7 +208,7 @@ export default class NewAccount extends PureComponent {
                 <a
                   onClick={(e) => e.stopPropagation()}
                   key="first-time-flow__link-text"
-                  href="https://metamask.io/terms.html"
+                  href="https://dev.myetpwallet.com/info/legal"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

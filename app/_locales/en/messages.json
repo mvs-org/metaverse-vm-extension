@@ -626,7 +626,7 @@
     "description": "Title for error stack, which is displayed for debugging purposes"
   },
   "ethereumPublicAddress": {
-    "message": "Ethereum Public Address"
+    "message": "MetaverseVM Address"
   },
   "etherscanView": {
     "message": "View account on Explorer"
@@ -1107,7 +1107,7 @@
     "message": "Primary Currency"
   },
   "primaryCurrencySettingDescription": {
-    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETH). Select Fiat to prioritize displaying values in your selected fiat currency."
+    "message": "Select native to prioritize displaying values in the native currency of the chain (e.g. ETP). Select Fiat to prioritize displaying values in your selected fiat currency."
   },
   "privacyMsg": {
     "message": "Privacy Policy"
@@ -1144,7 +1144,7 @@
     "message": "Recipient Address"
   },
   "recipientAddressPlaceholder": {
-    "message": "Search, public address (0x), or ENS"
+    "message": "VM address (0x)"
   },
   "rejectAll": {
     "message": "Reject All"
@@ -1675,7 +1675,7 @@
     "message": "Display a warning for phishing domains targeting Metaverse users"
   },
   "userName": {
-    "message": "Username"
+    "message": "Name"
   },
   "viewAccount": {
     "message": "View Account"

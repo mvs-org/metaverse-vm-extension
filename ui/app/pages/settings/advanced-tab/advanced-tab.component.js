@@ -471,17 +471,17 @@ export default class AdvancedTab extends PureComponent {
     return (
       <div className="settings-page__body">
         { warning && <div className="settings-tab__error">{ warning }</div> }
-        { this.renderStateLogs() }
-        { this.renderMobileSync() }
+        {/* { this.renderStateLogs() } */}
+        {/* { this.renderMobileSync() } */}
         { this.renderResetAccount() }
         { this.renderAdvancedGasInputInline() }
-        { this.renderTransactionTimeEstimates() }
+        {/* { this.renderTransactionTimeEstimates() } */}
         { this.renderHexDataOptIn() }
-        { this.renderShowConversionInTestnets() }
+        {/* { this.renderShowConversionInTestnets() } */}
         { this.renderUseNonceOptIn() }
         { this.renderAutoLockTimeLimit() }
-        { this.renderThreeBoxControl() }
-        { this.renderIpfsGatewayControl() }
+        {/* { this.renderThreeBoxControl() } */}
+        {/* { this.renderIpfsGatewayControl() } */}
       </div>
     )
   }
