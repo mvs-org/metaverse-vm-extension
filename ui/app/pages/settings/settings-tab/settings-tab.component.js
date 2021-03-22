@@ -187,7 +187,7 @@ export default class SettingsTab extends PureComponent {
         { this.renderCurrentConversion() }
         { this.renderUsePrimaryCurrencyOptions() }
         { this.renderCurrentLocale() }
-        { this.renderBlockieOptIn() }
+        {/* { this.renderBlockieOptIn() } */}
       </div>
     )
   }
