@@ -144,6 +144,10 @@ module.exports = class MetaverseVMInpageProvider extends SafeEventEmitter {
     // ignore phishing warning message (handled elsewhere)
     mux.ignoreStream('mvsPhishing')
 
+    // ignore metamask streams
+    mux.ignoreStream('publicConfig')
+    mux.ignoreStream('provider')
+
     // setup own event listeners
 
     // EIP-1193 connect
