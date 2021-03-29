@@ -47,8 +47,8 @@ log.setDefaultLevel(process.env.METAMASK_DEBUG ? 'debug' : 'warn')
 
 // setup background connection
 const metaversevmStream = new LocalMessageDuplexStream({
-  name: 'inpage',
-  target: 'contentscript',
+  name: 'inpage-mvs',
+  target: 'contentscript-mvs',
 })
 
 initProvider({
