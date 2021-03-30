@@ -71,12 +71,7 @@
     "storage",
     "unlimitedStorage",
     "clipboardWrite",
-    "http://localhost:8545/",
-    "https://*.mvs.org/",
     "activeTab",
-    "webRequest",
-    "*://*.mvs/",
-    "*://*.eth/",
     "notifications"
   ],
   "web_accessible_resources": [
