@@ -184,16 +184,10 @@ class NetworkDropdown extends Component {
 
     if (providerName === 'mainnet') {
       name = this.context.t('mainnet')
-    } else if (providerName === 'ropsten') {
-      name = this.context.t('ropsten')
-    } else if (providerName === 'kovan') {
-      name = this.context.t('kovan')
-    } else if (providerName === 'rinkeby') {
-      name = this.context.t('rinkeby')
-    } else if (providerName === 'localhost') {
-      name = this.context.t('localhost')
-    } else if (providerName === 'goerli') {
-      name = this.context.t('goerli')
+    } else if (providerName === 'andromeda') {
+      name = this.context.t('adnromeda')
+    } else if (providerName === 'hyperspace') {
+      name = this.context.t('hyperspace')
     } else {
       name = provider.nickname || this.context.t('unknownNetwork')
     }
