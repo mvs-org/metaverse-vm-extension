@@ -13,11 +13,12 @@ export const GOERLI_NETWORK_ID = '5'
 export const KOVAN_NETWORK_ID = '42'
 export const ANDROMEDA_NETWORK_ID = '43'
 
-export const MAINNET_CHAIN_ID = '0x1'
+export const MAINNET_CHAIN_ID = '0x17'
 export const ROPSTEN_CHAIN_ID = '0x3'
 export const RINKEBY_CHAIN_ID = '0x4'
 export const GOERLI_CHAIN_ID = '0x5'
 export const KOVAN_CHAIN_ID = '0x2a'
+export const ANDROMEDA_CHAIN_ID = '0x2b'
 
 export const ROPSTEN_DISPLAY_NAME = 'Ropsten'
 export const RINKEBY_DISPLAY_NAME = 'Rinkeby'
