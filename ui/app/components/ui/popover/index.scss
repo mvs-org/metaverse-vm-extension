@@ -6,7 +6,7 @@
 
     ::-webkit-scrollbar-thumb {
       -webkit-border-radius: 10px;
-      border-radius: 10px;
+      border-radius: 5px;
       background: #c4c4c4;
     }
 
@@ -16,7 +16,7 @@
     width: 328px;
     max-height: 94vh;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    border-radius: 5px;
     background: white;
   }
 
@@ -26,7 +26,7 @@
     flex-direction: column;
     background: white;
     position: relative;
-    border-radius: 10px;
+    border-radius: 5px;
 
     &__title {
       display: flex;
@@ -83,7 +83,7 @@
     justify-content: flex-start;
     align-items: stretch;
     align-content: stretch;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   &-container {

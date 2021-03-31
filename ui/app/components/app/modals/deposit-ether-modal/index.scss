@@ -1,12 +1,12 @@
 .deposit-ether-modal {
-  border-radius: 8px;
+  border-radius: 5px;
   display: flex;
   flex-flow: column;
   height: 100%;
 
   &__header {
     width: 100%;
-    border-radius: 8px 8px 0 0;
+    border-radius: 5px 5px 0 0;
     background-color: $mid-gray;
     display: flex;
     position: relative;

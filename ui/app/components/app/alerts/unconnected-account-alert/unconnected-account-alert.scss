@@ -22,7 +22,7 @@
     height: 40px;
     width: 100px;
     border: 0;
-    border-radius: 100px;
+    border-radius: 5px;
   }
 
   &__error {
@@ -31,7 +31,7 @@
     font-size: 14px;
     border: 1px solid $accent-red;
     background: #f8eae8;
-    border-radius: 3px;
+    border-radius: 5px;
   }
 
   &__checkbox-wrapper {

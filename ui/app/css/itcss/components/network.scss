@@ -8,7 +8,7 @@
 
 .network-component.pointer {
   border: 2px solid $Grey-200;
-  border-radius: 82px;
+  border-radius: 5px;
   padding: 6px 3px;
   flex: 0 0 auto;
   display: flex;
@@ -124,7 +124,7 @@
 .menu-icon-circle,
 .menu-icon-circle--active {
   background: none;
-  border-radius: 22px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +141,7 @@
 .menu-icon-circle--active div {
   height: 12px;
   width: 12px;
-  border-radius: 17px;
+  border-radius: 5px;
 }
 
 .menu-icon-circle--active div {

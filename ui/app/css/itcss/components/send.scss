@@ -44,7 +44,7 @@
 }
 
 .send-eth-icon {
-  border-radius: 50%;
+  border-radius: 5px;
   width: 70px;
   height: 70px;
   border: 1px solid $alto;
@@ -396,7 +396,7 @@
 .send-v2 {
   &__container {
     width: 380px;
-    border-radius: 8px;
+    border-radius: 5px;
     background-color: $white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
     display: flex;
@@ -423,7 +423,7 @@
   }
 
   &__send-header-icon {
-    border-radius: 50%;
+    border-radius: 5px;
     width: 48px;
     height: 48px;
     border: 1px solid $alto;

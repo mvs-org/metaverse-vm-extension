@@ -31,7 +31,7 @@
     align-items: center;
     display: flex;
     padding-top: 17px;
-    border-radius: 4px;
+    border-radius: 5px;
     border: 2px solid $spindle;
     background: $white;
     color: $scorpion;
@@ -191,7 +191,7 @@
     width: 108px;
     height: 97px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.151579);
-    border-radius: 6px;
+    border-radius: 5px;
     border: none;
 
     div {
@@ -222,7 +222,7 @@
     .button-check-wrapper {
       height: 16px;
       width: 16px;
-      border-radius: 8px;
+      border-radius: 5px;
       position: absolute;
       top: -11px;
       right: -10px;
