@@ -7,7 +7,7 @@ import TextField from '../../../components/ui/text-field'
 
 const contractList = Object.entries(contractMap)
   .map(([address, tokenData]) => ({ ...tokenData, address }))
-  .filter((tokenData) => Boolean(tokenData.erc20))
+  .filter((tokenData) => Boolean(tokenData.mst))
 
 const fuse = new Fuse(contractList, {
   shouldSort: true,
