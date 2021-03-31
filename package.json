@@ -72,7 +72,7 @@
     "@metamask/eth-token-tracker": "^3.0.0",
     "@metamask/etherscan-link": "^1.1.0",
     "@metamask/logo": "^2.5.0",
-    "@mvs-org/vm-contract-metadata": "^1.25.0",
+    "@mvs-org/vm-contract-metadata": "^1.26.0",
     "@popperjs/core": "^2.4.0",
     "@reduxjs/toolkit": "^1.3.2",
     "@sentry/browser": "^5.11.1",
