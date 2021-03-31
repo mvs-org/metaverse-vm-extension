@@ -55,7 +55,6 @@ export default class ConnectedStatusIndicator extends Component {
     return (
       <button className="connected-status-indicator" onClick={this.props.onClick}>
         { this.renderStatusCircle() }
-        { this.renderStatusText() }
       </button>
     )
   }

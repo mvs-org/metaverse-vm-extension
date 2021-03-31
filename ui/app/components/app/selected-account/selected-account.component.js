@@ -42,7 +42,7 @@ class SelectedAccount extends Component {
               { selectedIdentity.name }
             </div>
             <div className="selected-account__address">
-              { shortenAddress(checksummedAddress) }
+              { checksummedAddress }
             </div>
           </div>
         </Tooltip>
