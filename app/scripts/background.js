@@ -31,7 +31,7 @@ import MetamaskController from './metamask-controller'
 import rawFirstTimeState from './first-time-state'
 import getFirstPreferredLangCode from './lib/get-first-preferred-lang-code'
 import getObjStructure from './lib/getObjStructure'
-import setupEnsIpfsResolver from './lib/ens-ipfs/setup'
+// import setupEnsIpfsResolver from './lib/ens-ipfs/setup'
 
 import {
   ENVIRONMENT_TYPE_POPUP,
@@ -237,11 +237,11 @@ function setupController (initState, initLangCode) {
     },
   })
 
-  setupEnsIpfsResolver({
-    getCurrentNetwork: controller.getCurrentNetwork,
-    getIpfsGateway: controller.preferencesController.getIpfsGateway.bind(controller.preferencesController),
-    provider: controller.provider,
-  })
+  // setupEnsIpfsResolver({
+  //   getCurrentNetwork: controller.getCurrentNetwork,
+  //   getIpfsGateway: controller.preferencesController.getIpfsGateway.bind(controller.preferencesController),
+  //   provider: controller.provider,
+  // })
 
   // setup state persistence
   pump(
