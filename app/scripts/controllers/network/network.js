@@ -16,7 +16,8 @@ import {
   // RINKEBY,
   MAINNET,
   LOCALHOST,
-  ANDROMEDA,
+  ETHEREUM,
+  NEWFRONTIER,
   INFURA_PROVIDER_TYPES,
 } from './enums'
 
@@ -175,8 +176,10 @@ export default class NetworkController extends EventEmitter {
     const isInfura = INFURA_PROVIDER_TYPES.includes(type)
     if(type === MAINNET){
       this._configureStandardProvider({ rpcUrl: 'https://vm.mvs.org/mainnet_rpc/', chainId: '23', ticker: 'ETP' })
-    } else if(type === ANDROMEDA){
-      this._configureStandardProvider({ rpcUrl: 'https://vm.mvs.org/testnet_rpc/', chainId: '43', ticker: 'ETP' })
+    } else if(type === NEWFRONTIER){
+      this._configureStandardProvider({ rpcUrl: 'https://nf-testnet-rpc.mvs.org', chainId: '43', ticker: 'ETP' })
+    } else if(type === ETHEREUM){
+      this._configureStandardProvider({ rpcUrl: 'https://mainnet.infura.io/v3/cb01180320794e5481d93343db3ceee3', chainId: '1', ticker: 'ETH' })
     } else if (isInfura) {
       this._configureInfuraProvider(opts)
     // other type-based rpc endpoints

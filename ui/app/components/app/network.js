@@ -97,17 +97,29 @@ export default class Network extends Component {
           </NetworkIndicator>
         )
 
-        case 'andromeda':
-          return (
-            <NetworkIndicator disabled={disabled} hoverText={t('andromeda')} onClick={onClick} providerName={providerName}>
-              <NetworkDropdownIcon
-                backgroundColor="#e91550"
-                nonSelectBackgroundColor="#ec2c50"
-                loading={networkNumber === 'loading'}
-              />
-              <div className="network-name">{t('andromeda')}</div>
-            </NetworkIndicator>
-          )
+      case 'ethereum':
+        return (
+          <NetworkIndicator disabled={disabled} hoverText={t('ethereum')} onClick={onClick} providerName={providerName}>
+            <NetworkDropdownIcon
+              backgroundColor="#e91550"
+              nonSelectBackgroundColor="#ec2c50"
+              loading={networkNumber === 'loading'}
+            />
+            <div className="network-name">{t('ethereum')}</div>
+          </NetworkIndicator>
+        )
+
+      case 'newfrontier':
+        return (
+          <NetworkIndicator disabled={disabled} hoverText={t('newfrontier')} onClick={onClick} providerName={providerName}>
+            <NetworkDropdownIcon
+              backgroundColor="#40d3ff"
+              nonSelectBackgroundColor="#40d3ff"
+              loading={networkNumber === 'loading'}
+            />
+            <div className="network-name">{t('newfrontier')}</div>
+          </NetworkIndicator>
+        )
 
       case 'kovan':
         return (

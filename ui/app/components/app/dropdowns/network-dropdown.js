@@ -184,8 +184,10 @@ class NetworkDropdown extends Component {
 
     if (providerName === 'mainnet') {
       name = this.context.t('mainnet')
-    } else if (providerName === 'andromeda') {
-      name = this.context.t('adnromeda')
+    } else if (providerName === 'newfrontier') {
+      name = this.context.t('newfrontier')
+    } else if (providerName === 'ethereum') {
+      name = this.context.t('ethereum')
     } else if (providerName === 'hyperspace') {
       name = this.context.t('hyperspace')
     } else {
@@ -264,24 +266,47 @@ class NetworkDropdown extends Component {
         <DropdownMenuItem
           key="main"
           closeMenu={() => this.props.hideNetworkDropdown()}
-          onClick={() => this.handleClick('andromeda')}
+          onClick={() => this.handleClick('ethereum')}
           style={{ ...dropdownMenuItemStyle, borderColor: '#ec2c50' }}
         >
           {
-            providerType === 'andromeda'
+            providerType === 'ethereum'
               ? <i className="fa fa-check" />
               : <div className="network-check__transparent">✓</div>
           }
-          <NetworkDropdownIcon backgroundColor="#e91550" isSelected={providerType === 'andromeda'} />
+          <NetworkDropdownIcon backgroundColor="#e91550" isSelected={providerType === 'ethereum'} />
           <span
             className="network-name-item"
             style={{
-              color: providerType === 'andromeda'
+              color: providerType === 'ethereum'
                 ? '#ffffff'
                 : '#9b9b9b',
             }}
           >
-            {this.context.t('andromeda')}
+            {this.context.t('ethereum')}
+          </span>
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          key="main"
+          closeMenu={() => this.props.hideNetworkDropdown()}
+          onClick={() => this.handleClick('newfrontier')}
+          style={{ ...dropdownMenuItemStyle, borderColor: '#ec2c50' }}
+        >
+          {
+            providerType === 'newfrontier'
+              ? <i className="fa fa-check" />
+              : <div className="network-check__transparent">✓</div>
+          }
+          <NetworkDropdownIcon backgroundColor="#e91550" isSelected={providerType === 'newfrontier'} />
+          <span
+            className="network-name-item"
+            style={{
+              color: providerType === 'newfrontier'
+                ? '#ffffff'
+                : '#9b9b9b',
+            }}
+          >
+            {this.context.t('newfrontier')}
           </span>
         </DropdownMenuItem>
         <DropdownMenuItem

@@ -14,8 +14,9 @@ export const NETWORK_TYPES = {
   RINKEBY: 'rinkeby',
   ROPSTEN: 'ropsten',
   GOERLI: 'goerli',
-  ANDROMEDA: 'andromeda',
   HYPERSPACE: 'hyperspace',
+  ETHEREUM: 'ethereum',
+  NEWFRONTIER: 'newfrontier',
 }
 
 export const GAS_ESTIMATE_TYPES = {
