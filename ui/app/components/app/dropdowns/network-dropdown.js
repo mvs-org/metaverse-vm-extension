@@ -290,14 +290,14 @@ class NetworkDropdown extends Component {
           key="main"
           closeMenu={() => this.props.hideNetworkDropdown()}
           onClick={() => this.handleClick('newfrontier')}
-          style={{ ...dropdownMenuItemStyle, borderColor: '#ec2c50' }}
+          style={{ ...dropdownMenuItemStyle, borderColor: '#40d3ff' }}
         >
           {
             providerType === 'newfrontier'
               ? <i className="fa fa-check" />
               : <div className="network-check__transparent">✓</div>
           }
-          <NetworkDropdownIcon backgroundColor="#e91550" isSelected={providerType === 'newfrontier'} />
+          <NetworkDropdownIcon backgroundColor="#40d3ff" isSelected={providerType === 'newfrontier'} />
           <span
             className="network-name-item"
             style={{
