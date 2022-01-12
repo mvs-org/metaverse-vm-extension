@@ -179,7 +179,7 @@ export default class NetworkController extends EventEmitter {
     } else if(type === NEWFRONTIER){
       this._configureStandardProvider({ rpcUrl: 'https://nf-testnet-rpc.mvs.org', chainId: '43', ticker: 'ETP' })
     } else if(type === ETHEREUM){
-      this._configureStandardProvider({ rpcUrl: 'https://mainnet.infura.io/v3/cb01180320794e5481d93343db3ceee3', chainId: '1', ticker: 'ETH' })
+      this._configureStandardProvider({ rpcUrl: 'https://eth1.opreturn.workers.dev', chainId: '1', ticker: 'ETH' })
     } else if (isInfura) {
       this._configureInfuraProvider(opts)
     // other type-based rpc endpoints
