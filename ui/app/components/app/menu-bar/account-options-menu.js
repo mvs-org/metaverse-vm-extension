@@ -88,17 +88,6 @@ export default function AccountOptionsMenu ({ anchorElement, onClose }) {
         { t('accountDetails') }
       </MenuItem>
       <MenuItem
-        data-testid="account-options-menu__view-explorer"
-        onClick={() => {
-          dispatch(showModal({ name: 'VIEW_EXPLORER' }))
-          viewAccountDetailsEvent()
-          onClose()
-        }}
-        iconClassName="fas fa-qrcode"
-      >
-        { t('accountDetails') }
-      </MenuItem>
-      <MenuItem
         data-testid="account-options-menu__connected-sites"
         onClick={() => {
           openConnectedSitesEvent()

@@ -1770,5 +1770,8 @@
   },
   "ethereum": {
     "message": "Ethereum Mainnet"
+  },
+  "polygon": {
+    "message": "Polygon"
   }
 }

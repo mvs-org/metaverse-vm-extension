@@ -109,6 +109,18 @@ export default class Network extends Component {
           </NetworkIndicator>
         )
 
+      case 'polygon':
+        return (
+          <NetworkIndicator disabled={disabled} hoverText={t('polygon')} onClick={onClick} providerName={providerName}>
+            <NetworkDropdownIcon
+              backgroundColor="#8247e5"
+              nonSelectBackgroundColor="#8247e5"
+              loading={networkNumber === 'loading'}
+            />
+            <div className="network-name">{t('polygon')}</div>
+          </NetworkIndicator>
+        )
+
       case 'newfrontier':
         return (
           <NetworkIndicator disabled={disabled} hoverText={t('newfrontier')} onClick={onClick} providerName={providerName}>
@@ -180,7 +192,7 @@ export default class Network extends Component {
               {
                 providerName === 'localhost'
                   ? t('localhost')
-                  : providerNick || t('privateNetwork')
+                  : providerNick || t('providerName') || t('privateNetwork')
               }
             </div>
           </NetworkIndicator>

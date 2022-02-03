@@ -1,6 +1,7 @@
 export const ETP = 'ETP'
 
 export const ETH = 'ETP'
+export const POLYGON = 'POLYGON'
 export const GWEI = 'GWEI'
 export const WEI = 'WEI'
 export const SATA = 'SATS'
@@ -16,6 +17,7 @@ export const NETWORK_TYPES = {
   GOERLI: 'goerli',
   HYPERSPACE: 'hyperspace',
   ETHEREUM: 'ethereum',
+  POLYGON: 'polygon',
   NEWFRONTIER: 'newfrontier',
 }
 

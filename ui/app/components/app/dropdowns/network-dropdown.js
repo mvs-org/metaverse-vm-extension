@@ -188,6 +188,8 @@ class NetworkDropdown extends Component {
       name = this.context.t('newfrontier')
     } else if (providerName === 'ethereum') {
       name = this.context.t('ethereum')
+    } else if (providerName === 'polygon') {
+      name = this.context.t('polygon')
     } else if (providerName === 'hyperspace') {
       name = this.context.t('hyperspace')
     } else {
@@ -284,6 +286,29 @@ class NetworkDropdown extends Component {
             }}
           >
             {this.context.t('ethereum')}
+          </span>
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          key="main"
+          closeMenu={() => this.props.hideNetworkDropdown()}
+          onClick={() => this.handleClick('polygon')}
+          style={{ ...dropdownMenuItemStyle, borderColor: '#8247e5' }}
+        >
+          {
+            providerType === 'polygon'
+              ? <i className="fa fa-check" />
+              : <div className="network-check__transparent">✓</div>
+          }
+          <NetworkDropdownIcon backgroundColor="#8247e5" isSelected={providerType === 'polygon'} />
+          <span
+            className="network-name-item"
+            style={{
+              color: providerType === 'polygon'
+                ? '#ffffff'
+                : '#9b9b9b',
+            }}
+          >
+            {this.context.t('polygon')}
           </span>
         </DropdownMenuItem>
         <DropdownMenuItem
