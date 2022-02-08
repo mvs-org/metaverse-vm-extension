@@ -121,6 +121,18 @@ export default class Network extends Component {
           </NetworkIndicator>
         )
 
+      case 'bsc':
+        return (
+          <NetworkIndicator disabled={disabled} hoverText={t('bsc')} onClick={onClick} providerName={providerName}>
+            <NetworkDropdownIcon
+              backgroundColor="#f7cf2c"
+              nonSelectBackgroundColor="#f7cf2c"
+              loading={networkNumber === 'loading'}
+            />
+            <div className="network-name">{t('bsc')}</div>
+          </NetworkIndicator>
+        )
+
       case 'newfrontier':
         return (
           <NetworkIndicator disabled={disabled} hoverText={t('newfrontier')} onClick={onClick} providerName={providerName}>
@@ -192,7 +204,7 @@ export default class Network extends Component {
               {
                 providerName === 'localhost'
                   ? t('localhost')
-                  : providerNick || t('providerName') || t('privateNetwork')
+                  : providerNick || t('privateNetwork')
               }
             </div>
           </NetworkIndicator>

@@ -7,6 +7,7 @@ export const LOCALHOST = 'localhost'
 export const NEWFRONTIER = 'newfrontier'
 export const ETHEREUM = 'ethereum'
 export const POLYGON = 'polygon'
+export const BSC = 'bsc'
 
 export const MAINNET_NETWORK_ID = '23'
 export const ROPSTEN_NETWORK_ID = '3'
@@ -16,6 +17,7 @@ export const KOVAN_NETWORK_ID = '42'
 export const NEWFRONTIER_NETWORK_ID = '43'
 export const ETHEREUM_NETWORK_ID = '1'
 export const POLYGON_NETWORK_ID = '137'
+export const BSC_NETWORK_ID = '56'
 
 export const MAINNET_CHAIN_ID = '0x17'
 export const ROPSTEN_CHAIN_ID = '0x3'
@@ -25,6 +27,7 @@ export const KOVAN_CHAIN_ID = '0x2a'
 export const NEWFRONTIER_CHAIN_ID = '0x2b'
 export const ETHEREUM_CHAIN_ID = '0x1'
 export const POLYGON_CHAIN_ID = '0x89'
+export const BSC_CHAIN_ID = '0x38'
 
 export const ROPSTEN_DISPLAY_NAME = 'Ropsten'
 export const RINKEBY_DISPLAY_NAME = 'Rinkeby'
@@ -34,6 +37,7 @@ export const GOERLI_DISPLAY_NAME = 'Goerli'
 export const NEWFRONTIER_DISPLAY_NAME = 'New Frontier Testnet'
 export const ETHEREUM_DISPLAY_NAME = 'Ethereum Mainnet'
 export const POLYGON_DISPLAY_NAME = 'Polygon'
+export const BSC_DISPLAY_NAME = 'Binance Smart Chain'
 
 export const INFURA_PROVIDER_TYPES = [
   ROPSTEN,
@@ -44,6 +48,7 @@ export const INFURA_PROVIDER_TYPES = [
   NEWFRONTIER,
   ETHEREUM,
   POLYGON,
+  BSC,
 ]
 
 export const NETWORK_TYPE_TO_ID_MAP = {
@@ -55,6 +60,7 @@ export const NETWORK_TYPE_TO_ID_MAP = {
   [NEWFRONTIER]: { networkId: NEWFRONTIER_NETWORK_ID, chainId: NEWFRONTIER_CHAIN_ID },
   [ETHEREUM]: { networkId: ETHEREUM_NETWORK_ID, chainId: ETHEREUM_CHAIN_ID },
   [POLYGON]: { networkId: POLYGON_NETWORK_ID, chainId: POLYGON_CHAIN_ID },
+  [BSC]: { networkId: BSC_NETWORK_ID, chainId: BSC_CHAIN_ID },
 }
 
 export const NETWORK_TO_NAME_MAP = {
@@ -66,6 +72,7 @@ export const NETWORK_TO_NAME_MAP = {
   [NEWFRONTIER]: NEWFRONTIER_DISPLAY_NAME,
   [ETHEREUM]: ETHEREUM_DISPLAY_NAME,
   [POLYGON]: POLYGON_DISPLAY_NAME,
+  [BSC]: BSC_DISPLAY_NAME,
 
   [ROPSTEN_NETWORK_ID]: ROPSTEN_DISPLAY_NAME,
   [RINKEBY_NETWORK_ID]: RINKEBY_DISPLAY_NAME,
@@ -75,6 +82,7 @@ export const NETWORK_TO_NAME_MAP = {
   [NEWFRONTIER_NETWORK_ID]: NEWFRONTIER_DISPLAY_NAME,
   [ETHEREUM_NETWORK_ID]: ETHEREUM_DISPLAY_NAME,
   [POLYGON_NETWORK_ID]: POLYGON_DISPLAY_NAME,
+  [BSC_NETWORK_ID]: BSC_DISPLAY_NAME,
 
   [ROPSTEN_CHAIN_ID]: ROPSTEN_DISPLAY_NAME,
   [RINKEBY_CHAIN_ID]: RINKEBY_DISPLAY_NAME,
@@ -84,4 +92,5 @@ export const NETWORK_TO_NAME_MAP = {
   [NEWFRONTIER_CHAIN_ID]: NEWFRONTIER_DISPLAY_NAME,
   [ETHEREUM_CHAIN_ID]: ETHEREUM_DISPLAY_NAME,
   [POLYGON_CHAIN_ID]: POLYGON_DISPLAY_NAME,
+  [BSC_CHAIN_ID]: BSC_DISPLAY_NAME,
 }

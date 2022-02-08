@@ -190,6 +190,8 @@ class NetworkDropdown extends Component {
       name = this.context.t('ethereum')
     } else if (providerName === 'polygon') {
       name = this.context.t('polygon')
+    } else if (providerName === 'bsc') {
+      name = this.context.t('bsc')
     } else if (providerName === 'hyperspace') {
       name = this.context.t('hyperspace')
     } else {
@@ -309,6 +311,29 @@ class NetworkDropdown extends Component {
             }}
           >
             {this.context.t('polygon')}
+          </span>
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          key="main"
+          closeMenu={() => this.props.hideNetworkDropdown()}
+          onClick={() => this.handleClick('bsc')}
+          style={{ ...dropdownMenuItemStyle, borderColor: '#f7cf2c' }}
+        >
+          {
+            providerType === 'bsc'
+              ? <i className="fa fa-check" />
+              : <div className="network-check__transparent">✓</div>
+          }
+          <NetworkDropdownIcon backgroundColor="#f7cf2c" isSelected={providerType === 'bsc'} />
+          <span
+            className="network-name-item"
+            style={{
+              color: providerType === 'bsc'
+                ? '#ffffff'
+                : '#9b9b9b',
+            }}
+          >
+            {this.context.t('bsc')}
           </span>
         </DropdownMenuItem>
         <DropdownMenuItem

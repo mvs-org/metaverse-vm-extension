@@ -19,6 +19,7 @@ import {
   ETHEREUM,
   NEWFRONTIER,
   POLYGON,
+  BSC,
   INFURA_PROVIDER_TYPES,
 } from './enums'
 
@@ -183,6 +184,8 @@ export default class NetworkController extends EventEmitter {
       this._configureStandardProvider({ rpcUrl: 'https://eth1.opreturn.workers.dev', chainId: '1', ticker: 'ETH' })
     } else if(type === POLYGON){
       this._configureStandardProvider({ rpcUrl: 'https://polygon-rpc.com', chainId: '137', ticker: 'MATIC', nickname: 'Polygon' })
+    } else if(type === BSC){
+      this._configureStandardProvider({ rpcUrl: 'https://bsc-dataseed.binance.org/', chainId: '56', ticker: 'BNB', nickname: 'BSC' })
     } else if (isInfura) {
       this._configureInfuraProvider(opts)
     // other type-based rpc endpoints
