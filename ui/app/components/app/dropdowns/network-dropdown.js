@@ -192,6 +192,8 @@ class NetworkDropdown extends Component {
       name = this.context.t('polygon')
     } else if (providerName === 'bsc') {
       name = this.context.t('bsc')
+    } else if (providerName === 'avalanche') {
+      name = this.context.t('avalanche')
     } else if (providerName === 'hyperspace') {
       name = this.context.t('hyperspace')
     } else {
@@ -271,14 +273,14 @@ class NetworkDropdown extends Component {
           key="main"
           closeMenu={() => this.props.hideNetworkDropdown()}
           onClick={() => this.handleClick('ethereum')}
-          style={{ ...dropdownMenuItemStyle, borderColor: '#ec2c50' }}
+          style={{ ...dropdownMenuItemStyle, borderColor: '#363636' }}
         >
           {
             providerType === 'ethereum'
               ? <i className="fa fa-check" />
               : <div className="network-check__transparent">✓</div>
           }
-          <NetworkDropdownIcon backgroundColor="#e91550" isSelected={providerType === 'ethereum'} />
+          <NetworkDropdownIcon backgroundColor="#363636" isSelected={providerType === 'ethereum'} />
           <span
             className="network-name-item"
             style={{
@@ -334,6 +336,29 @@ class NetworkDropdown extends Component {
             }}
           >
             {this.context.t('bsc')}
+          </span>
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          key="main"
+          closeMenu={() => this.props.hideNetworkDropdown()}
+          onClick={() => this.handleClick('avalanche')}
+          style={{ ...dropdownMenuItemStyle, borderColor: '#e84142' }}
+        >
+          {
+            providerType === 'avalanche'
+              ? <i className="fa fa-check" />
+              : <div className="network-check__transparent">✓</div>
+          }
+          <NetworkDropdownIcon backgroundColor="#e84142" isSelected={providerType === 'avalanche'} />
+          <span
+            className="network-name-item"
+            style={{
+              color: providerType === 'avalanche'
+                ? '#ffffff'
+                : '#9b9b9b',
+            }}
+          >
+            {this.context.t('avalanche')}
           </span>
         </DropdownMenuItem>
         <DropdownMenuItem

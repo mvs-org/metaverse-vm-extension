@@ -101,8 +101,8 @@ export default class Network extends Component {
         return (
           <NetworkIndicator disabled={disabled} hoverText={t('ethereum')} onClick={onClick} providerName={providerName}>
             <NetworkDropdownIcon
-              backgroundColor="#e91550"
-              nonSelectBackgroundColor="#ec2c50"
+              backgroundColor="#363636"
+              nonSelectBackgroundColor="#363636"
               loading={networkNumber === 'loading'}
             />
             <div className="network-name">{t('ethereum')}</div>
@@ -130,6 +130,18 @@ export default class Network extends Component {
               loading={networkNumber === 'loading'}
             />
             <div className="network-name">{t('bsc')}</div>
+          </NetworkIndicator>
+        )
+
+      case 'avalanche':
+        return (
+          <NetworkIndicator disabled={disabled} hoverText={t('avalanche')} onClick={onClick} providerName={providerName}>
+            <NetworkDropdownIcon
+              backgroundColor="#e84142"
+              nonSelectBackgroundColor="#e84142"
+              loading={networkNumber === 'loading'}
+            />
+            <div className="network-name">{t('avalanche')}</div>
           </NetworkIndicator>
         )
 

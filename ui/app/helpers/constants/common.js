@@ -3,6 +3,7 @@ export const ETP = 'ETP'
 export const ETH = 'ETP'
 export const POLYGON = 'POLYGON'
 export const BSC = 'BSC'
+export const AVALANCHE = 'AVALANCHE'
 export const GWEI = 'GWEI'
 export const WEI = 'WEI'
 export const SATA = 'SATS'
@@ -20,6 +21,7 @@ export const NETWORK_TYPES = {
   ETHEREUM: 'ethereum',
   POLYGON: 'polygon',
   BSC: 'bsc',
+  AVALANCHE: 'avalanche',
   NEWFRONTIER: 'newfrontier',
 }
 

@@ -1776,5 +1776,8 @@
   },
   "bsc": {
     "message": "Binance Smart Chain"
+  },
+  "avalanche": {
+    "message": "Avalanche"
   }
 }
