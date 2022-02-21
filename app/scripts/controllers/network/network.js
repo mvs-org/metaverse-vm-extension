@@ -21,6 +21,7 @@ import {
   POLYGON,
   BSC,
   AVALANCHE,
+  FANTOM,
   INFURA_PROVIDER_TYPES,
 } from './enums'
 
@@ -189,6 +190,8 @@ export default class NetworkController extends EventEmitter {
       this._configureStandardProvider({ rpcUrl: 'https://bsc-dataseed.binance.org/', chainId: '56', ticker: 'BNB', nickname: 'BSC' })
     } else if(type === AVALANCHE){
       this._configureStandardProvider({ rpcUrl: 'https://api.avax.network/ext/bc/C/rpc', chainId: '43114', ticker: 'AVAX', nickname: 'Avalanche' })
+    } else if(type === FANTOM){
+      this._configureStandardProvider({ rpcUrl: 'https://rpc.ftm.tools/', chainId: '250', ticker: 'FTM', nickname: 'Fantom' })
     } else if (isInfura) {
       this._configureInfuraProvider(opts)
     // other type-based rpc endpoints

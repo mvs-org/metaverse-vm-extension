@@ -1779,5 +1779,9 @@
   },
   "avalanche": {
     "message": "Avalanche"
+  },
+  "fantom": {
+    "message": "Fantom"
   }
+
 }

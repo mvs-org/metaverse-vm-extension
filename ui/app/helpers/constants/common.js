@@ -22,6 +22,7 @@ export const NETWORK_TYPES = {
   POLYGON: 'polygon',
   BSC: 'bsc',
   AVALANCHE: 'avalanche',
+  FANTOM: 'fantom',
   NEWFRONTIER: 'newfrontier',
 }
 

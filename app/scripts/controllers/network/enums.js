@@ -9,6 +9,7 @@ export const ETHEREUM = 'ethereum'
 export const POLYGON = 'polygon'
 export const BSC = 'bsc'
 export const AVALANCHE = 'avalanche'
+export const FANTOM = 'fantom'
 
 export const MAINNET_NETWORK_ID = '23'
 export const ROPSTEN_NETWORK_ID = '3'
@@ -20,6 +21,7 @@ export const ETHEREUM_NETWORK_ID = '1'
 export const POLYGON_NETWORK_ID = '137'
 export const BSC_NETWORK_ID = '56'
 export const AVALANCHE_NETWORK_ID = '43114'
+export const FANTOM_NETWORK_ID = '250'
 
 export const MAINNET_CHAIN_ID = '0x17'
 export const ROPSTEN_CHAIN_ID = '0x3'
@@ -31,6 +33,7 @@ export const ETHEREUM_CHAIN_ID = '0x1'
 export const POLYGON_CHAIN_ID = '0x89'
 export const BSC_CHAIN_ID = '0x38'
 export const AVALANCHE_CHAIN_ID = '0xa86a'
+export const FANTOM_CHAIN_ID = '0xfa'
 
 export const ROPSTEN_DISPLAY_NAME = 'Ropsten'
 export const RINKEBY_DISPLAY_NAME = 'Rinkeby'
@@ -42,6 +45,7 @@ export const ETHEREUM_DISPLAY_NAME = 'Ethereum Mainnet'
 export const POLYGON_DISPLAY_NAME = 'Polygon Network'
 export const BSC_DISPLAY_NAME = 'Binance Smart Chain'
 export const AVALANCHE_DISPLAY_NAME = 'Avalanche Network'
+export const FANTOM_DISPLAY_NAME = 'Fantom Opera'
 
 export const INFURA_PROVIDER_TYPES = [
   ROPSTEN,
@@ -54,6 +58,7 @@ export const INFURA_PROVIDER_TYPES = [
   POLYGON,
   BSC,
   AVALANCHE,
+  FANTOM,
 ]
 
 export const NETWORK_TYPE_TO_ID_MAP = {
@@ -67,6 +72,7 @@ export const NETWORK_TYPE_TO_ID_MAP = {
   [POLYGON]: { networkId: POLYGON_NETWORK_ID, chainId: POLYGON_CHAIN_ID },
   [BSC]: { networkId: BSC_NETWORK_ID, chainId: BSC_CHAIN_ID },
   [AVALANCHE]: { networkId: AVALANCHE_NETWORK_ID, chainId: AVALANCHE_CHAIN_ID },
+  [FANTOM]: { networkId: FANTOM_NETWORK_ID, chainId: FANTOM_CHAIN_ID },
 }
 
 export const NETWORK_TO_NAME_MAP = {
@@ -80,6 +86,7 @@ export const NETWORK_TO_NAME_MAP = {
   [POLYGON]: POLYGON_DISPLAY_NAME,
   [BSC]: BSC_DISPLAY_NAME,
   [AVALANCHE]: AVALANCHE_DISPLAY_NAME,
+  [FANTOM]: FANTOM_DISPLAY_NAME,
 
   [ROPSTEN_NETWORK_ID]: ROPSTEN_DISPLAY_NAME,
   [RINKEBY_NETWORK_ID]: RINKEBY_DISPLAY_NAME,
@@ -91,6 +98,7 @@ export const NETWORK_TO_NAME_MAP = {
   [POLYGON_NETWORK_ID]: POLYGON_DISPLAY_NAME,
   [BSC_NETWORK_ID]: BSC_DISPLAY_NAME,
   [AVALANCHE_NETWORK_ID]: AVALANCHE_DISPLAY_NAME,
+  [FANTOM_NETWORK_ID]: FANTOM_DISPLAY_NAME,
 
   [ROPSTEN_CHAIN_ID]: ROPSTEN_DISPLAY_NAME,
   [RINKEBY_CHAIN_ID]: RINKEBY_DISPLAY_NAME,
@@ -102,4 +110,5 @@ export const NETWORK_TO_NAME_MAP = {
   [POLYGON_CHAIN_ID]: POLYGON_DISPLAY_NAME,
   [BSC_CHAIN_ID]: BSC_DISPLAY_NAME,
   [AVALANCHE_CHAIN_ID]: AVALANCHE_DISPLAY_NAME,
+  [FANTOM_CHAIN_ID]: FANTOM_DISPLAY_NAME,
 }

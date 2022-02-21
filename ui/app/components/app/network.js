@@ -145,6 +145,18 @@ export default class Network extends Component {
           </NetworkIndicator>
         )
 
+      case 'fantom':
+        return (
+          <NetworkIndicator disabled={disabled} hoverText={t('fantom')} onClick={onClick} providerName={providerName}>
+            <NetworkDropdownIcon
+              backgroundColor="#2776fa"
+              nonSelectBackgroundColor="#2776fa"
+              loading={networkNumber === 'loading'}
+            />
+            <div className="network-name">{t('fantom')}</div>
+          </NetworkIndicator>
+        )
+
       case 'newfrontier':
         return (
           <NetworkIndicator disabled={disabled} hoverText={t('newfrontier')} onClick={onClick} providerName={providerName}>
