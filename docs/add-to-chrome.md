@@ -2,13 +2,18 @@
 
 <!--![Load dev build](./load-dev-build-chrome.gif)-->
 
-* Open `Settings` > `More tools` > `Extensions`.
-* Check "Developer mode".
+* Open `Settings` (3 dots) > `More tools` > `Extensions`.
 * Alternatively, use the URL `chrome://extensions/` in your address bar
-* At the top, click `Load Unpacked`.
-* Navigate to your `metaverse-vm-extension/dist/chrome` folder.
+* Check "Developer mode".
+* At the top, click `Load unpacked`.
+* Navigate to your `metaverse-vm-extension/dist/chrome` folder or use the release downloaded and unzipped.
 * Click `Select`.
-* (optional) Change to your locale via `chrome://settings/languages`
+
+You can now create or import your wallet !
+
+
+To change the language:
+* Change to your locale via `chrome://settings/languages`
 * Restart the browser and test the plugin in your locale
 
-You now have the plugin, and can click 'inspect views: background plugin' to view its dev console.
+To debug, you can click 'inspect views: background plugin' to view its dev console.
