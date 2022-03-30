@@ -1,6 +1,6 @@
 # Metaverse VM Browser Extension
 
-You can find the latest version of Metaverse on [our official website](https://mvs.org/). For help using Metaverse, visit our [Documentation Site](https://docs.mvs.org).
+You can find the latest version of the Metaverse on [our official website](https://mvs.org/). For help using Metaverse, visit our [Documentation Site](https://docs.mvs.org).
 
 The Metaverse VM browser extension supports Firefox, Google Chrome, and Chromium-based browsers. We recommend using the latest available browser version.
 
